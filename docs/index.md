@@ -2,7 +2,7 @@
 
 ## About Open AD Kit
 
-Open AD Kit is 
+Open AD Kit is
 
 Please see [here](https://www.autoware.org/autoware) for more details.
 
