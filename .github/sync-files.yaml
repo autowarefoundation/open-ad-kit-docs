@@ -20,3 +20,14 @@
     - source: .prettierignore
     - source: .prettierrc.yaml
     - source: .yamllint.yaml
+
+- repository: autowarefoundation/autoware-documentation
+  files:
+    - source: .github/workflows/deploy-docs.yaml
+    - source: .github/workflows/delete-closed-pr-docs.yaml
+    - source: .pre-commit-config.yaml
+    - source: mkdocs.yaml
+      post-commands: |
+        sd "Autoware Documentation" "Open AD Kit Documentation" {dest}
+        sd "autoware-documentation" "open-ad-kit-docs" {dest}
+        sd "repo_url: .*" "repo_url: https://github.com/autowarefoundation/open-ad-kit-docs" {dest}
