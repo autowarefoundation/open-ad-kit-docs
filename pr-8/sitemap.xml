@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-8/</loc>
+         <lastmod>2022-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-8/application-example/</loc>
+         <lastmod>2022-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-8/start-guide/</loc>
+         <lastmod>2022-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-8/system-configuration/</loc>
+         <lastmod>2022-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
