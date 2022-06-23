@@ -1,4 +1,3 @@
 # Application example
 
 TODO
-
