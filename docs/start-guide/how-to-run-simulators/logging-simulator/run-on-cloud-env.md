@@ -20,10 +20,10 @@ This page describes how to run the logging simulator on the cloud environment.
 
 TODO
 
-### 2. Create and run the logging simulator on the cloud platform
+### 2. Set up a simulation on the cloud platform
 
 TODO
 
-### 3. Run and run the logging simulator on the cloud platform
+### 3. Run the logging simulator on the cloud platform
 
 TODO

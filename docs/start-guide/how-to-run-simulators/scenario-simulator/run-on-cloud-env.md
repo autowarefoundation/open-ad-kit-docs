@@ -20,10 +20,10 @@ This page describes how to run the scenario simulator on the cloud environment.
 
 TODO
 
-### 2. Create and run the scenario simulator on the cloud platform
+### 2. Set up a simulation on the cloud platform
 
 TODO
 
-### 3. Run and run the scenario simulator on the cloud platform
+### 3. Run the scenario simulator on the cloud platform
 
 TODO

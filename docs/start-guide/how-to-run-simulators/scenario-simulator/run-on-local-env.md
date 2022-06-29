@@ -12,10 +12,10 @@ This page describes how to run the scenario simulator on the developer platform 
 
 [^1]: This is optional if you do NOT need a vehicle-edge platform.
 
-### 1. Create and run the scenario simulator on the cloud platform
+### 1. Set up a simulation on the developer platform
 
 TODO
 
-### 2. Run and run the scenario simulator on the cloud platform
+### 2. Run the scenario simulator on the developer platform
 
 TODO
