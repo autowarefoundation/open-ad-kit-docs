@@ -41,4 +41,4 @@ TODO
 
 ## 6. Run Autoware on the development platform
 
-Please refer to the [How to run autoware](../how-to-run-autoware/index.md) section.
+Please refer to the [How to run Autoware](../how-to-run-autoware/index.md) section.
