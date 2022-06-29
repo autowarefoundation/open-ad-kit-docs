@@ -6,11 +6,11 @@ This page describes how to run the scenario simulator on the cloud environment.
 
 ## Minimum requirements
 
-- Developer Platform: **TODO**
-- In-Vehicle Development Platform [^1]: **TODO**
-- Software Tool: **TODO**
-- Container Image: **TODO**
-- Data Pipeline: **TODO**
+- Developer Platform: TODO
+- In-Vehicle Development Platform [^1]: TODO
+- Software Tool: TODO
+- Container Image: TODO
+- Data Pipeline: TODO
 
 [^1]: This is optional if you do NOT need a vehicle-edge platform.
 
@@ -18,12 +18,12 @@ This page describes how to run the scenario simulator on the cloud environment.
 
 !!! note "If you already have access to Web.Auto, please skip this step."
 
-**TODO**
+TODO
 
 ### 2. Create and run the scenario simulator on the cloud platform
 
-**TODO**
+TODO
 
 ### 3. Run and run the scenario simulator on the cloud platform
 
-**TODO**
+TODO
