@@ -1,6 +1,6 @@
-# Run on the cloud environment
+# Run on the cloud platform
 
-This page describes how to run the logging simulator on the cloud environment.
+This page describes how to run the logging simulator on the cloud platform.
 
 !!! warning "The cloud platform, Web.Auto, is offered by [TIER IV](https://tier4.jp/en/), and it is available for the Autoware Foundation members."
 
