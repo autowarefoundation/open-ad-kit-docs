@@ -2,22 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://autowarefoundation.github.io/open-ad-kit-docs/main/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://autowarefoundation.github.io/open-ad-kit-docs/main/application-example/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://autowarefoundation.github.io/open-ad-kit-docs/main/start-guide/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/main/start-guide/how-to-run-autoware/</loc>
+         <lastmod>2022-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/main/start-guide/how-to-run-simulators/</loc>
+         <lastmod>2022-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/main/start-guide/how-to-run-simulators/logging-simulator/run-on-cloud-env/</loc>
+         <lastmod>2022-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/main/start-guide/how-to-run-simulators/scenario-simulator/run-on-cloud-env/</loc>
+         <lastmod>2022-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/main/start-guide/how-to-run-simulators/scenario-simulator/run-on-local-env/</loc>
+         <lastmod>2022-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/main/start-guide/installation/</loc>
+         <lastmod>2022-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://autowarefoundation.github.io/open-ad-kit-docs/main/system-configuration/</loc>
-         <lastmod>2022-06-29</lastmod>
+         <lastmod>2022-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
