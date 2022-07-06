@@ -2,7 +2,7 @@
 
 ## Overview
 
-_Reference: [Project Quickstart — EWAOL documentationn](https://ewaol.sites.arm.com/meta-ewaol/quickstart.html)_
+_Reference: [Project Quickstart — EWAOL documentation](https://ewaol.sites.arm.com/meta-ewaol/quickstart.html)_
 
 This instruction explain how to build yocto image with EWAOL on your host machine.
 If you are using [AVA Developer Platform](https://www.ipi.wiki/pages/com-hpc-altra), you can also download built image from ADLINK's website, and you can skip this steps;

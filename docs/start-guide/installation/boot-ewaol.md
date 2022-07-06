@@ -33,7 +33,7 @@ Remove M.2 SSD from AVA platform and flash yocto image to it directly.
 
 1. Flush yocto image to M.2 SSD.
 
-   :speech_balloon: For exmple
+   :speech_balloon: For example
 
    ```console
    sudo dd if=ewaol-image-docker-comhpc-20211022083723.rootfs.wic of=/dev/sdn bs=1M status=progress && sync

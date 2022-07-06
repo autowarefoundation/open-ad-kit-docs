@@ -2,9 +2,9 @@
 
 ## Overview
 
-This instruction explans how to perform system setup for test execution on your host.
+This instruction explains how to perform system setup for test execution on your host.
 
-You need to copy docker images and neccesary files, and checkout Autoware.Auto.
+You need to copy docker images and necessary files, and checkout Autoware.Auto.
 
 ## Copy scenario simulator image to your host machine
 
@@ -17,7 +17,7 @@ The docker image of scenario simulator is registered in [docker hub](https://hub
    docker pull tier4/scenario_simulator_v2:open_ad_kit-amd64-foxy
    ```
 
-## Copy neccesary files to your host machine
+## Copy necessary files to your host machine
 
 1. Copy **scenario** files for scenario simulator.
 
@@ -84,7 +84,7 @@ You need to change the element `NetworkInterfaceAddress` to the network interfac
           valid_lft forever preferred_lft forever
    ```
 
-   :speech_balloon: You can find inetwork interface such as `enp0s31f6`.
+   :speech_balloon: You can find a network interface such as `enp0s31f6`.
 
 1. Change the `NetworkInterfaceAddress`.
 
@@ -106,7 +106,7 @@ You need to change the element `NetworkInterfaceAddress` to the network interfac
 
 **In general, Autoware.Auto runs by using the Agile Development Environment (ADE), so we need to install ADE.**
 
-In this test, we use launch flle placed in Autoware.Auto to run visuzalization quickly and easily.
+In this test, we use launch file placed in Autoware.Auto to run visualization quickly and easily.
 
 1. Install ADE on AVA platform by following the instructions; [Installation — ADE 4.4.0dev documentation](https://ade-cli.readthedocs.io/en/latest/install.html)
 

@@ -32,9 +32,9 @@ For PCU 2.0 hardware, please download the MPU image file for SD card as marked r
 
 ## Flash MPU image
 
-To flash MPU image on SD card, you will need a PC with a micor SD card reader.
+To flash MPU image on SD card, you will need a PC with a micro SD card reader.
 
-This step could be done on either Windows or Linux PC with differnt flash tools.
+This step could be done on either Windows or Linux PC with different flash tools.
 
 Linux will be used in this instruction as example:
 
@@ -81,7 +81,7 @@ Linux will be used in this instruction as example:
 
 You could connect to PCU via SSh either by ethernet or serial port.
 
-The defalut username, password and IP address of PCU is as below:
+The default username, password and IP address of PCU is as below:
 ![PCU Label](images/getting-started-pcu/pcu_label.png)
 
 ### SSH through ethernet
@@ -147,7 +147,7 @@ The defalut username, password and IP address of PCU is as below:
 
 Connect PCU to internet via RJ45 1 Eth port (Red), this Eth port is configured to obtain IP address automatically from DHCP by default.
 
-From section above, you can SSH connect to PCU, and you can look for IP address of the puclic ethernet port(fm1-mac5).
+From section above, you can SSH connect to PCU, and you can look for IP address of the public ethernet port(fm1-mac5).
 
 ```console
 ifconfig fm1-mac5

@@ -2,9 +2,9 @@
 
 ## Overview
 
-This instruction explans how to perform system setup for test execution on PCU.
+This instruction explains how to perform system setup for test execution on PCU.
 
-You need to install Docker Engine, copy docker images and neccesary files.
+You need to install Docker Engine, copy docker images and necessary files.
 
 ## Access to PCU via SSH
 
@@ -34,7 +34,7 @@ The docker image of Autoware.Auto is registered in [GitLab Container Registry](h
    docker pull registry.gitlab.com/autowarefoundation/autoware.auto/autowareauto/arm64/openadkit-foxy:latest
    ```
 
-## Copy neccesary files to lcoal Downloads folder
+## Copy necessary files to local Downloads folder
 
 1. Copy files related to **map contents**.
 
@@ -84,7 +84,7 @@ The docker image of Autoware.Auto is registered in [GitLab Container Registry](h
       ssh user@192.168.10.221
       ```
 
-   1. Cpoy kernel configuration file to `/etc/sysctl.d/`
+   1. Copy kernel configuration file to `/etc/sysctl.d/`
 
       ```console
       sudo scp USER-NAME@IP-ADDRESS:/home/USER-NAME/Downloads/60_cyclonedds.conf /etc/sysctl.d/
@@ -160,7 +160,7 @@ You need to change the element `NetworkInterfaceAddress` to the network interfac
         valid_lft forever preferred_lft forever
    ```
 
-   :speech_balloon: You can find inetwork interface such as `fm1-mac5`.
+   :speech_balloon: You can find a network interface such as `fm1-mac5`.
 
 1. Change the `NetworkInterfaceAddress`.
 

@@ -20,12 +20,12 @@ Here is the instruction how to extend rootfs partition
    Contents of storage after we flashed yocto image to M.2 SSD.
    ![Contents of storage](images/extend-rootfs/gparted02.png)
 
-1. Unmout partitions.
+1. Unmount partitions.
 
-   To manipulate partitions, you need to unmout `root` and `data` partition.
+   To manipulate partitions, you need to unmount `root` and `data` partition.
 
    Right click `root` partition, then click `Unmount`.
-   ![Unmout root](images/extend-rootfs/gparted03.png)
+   ![Unmount root](images/extend-rootfs/gparted03.png)
 
    Unmount `data` partition as well.
 
@@ -47,7 +47,7 @@ Here is the instruction how to extend rootfs partition
 
    ![Data moved](images/extend-rootfs/gparted08.png)
 
-1. Extend rootfs partiton to the end of disk.
+1. Extend rootfs partition to the end of disk.
 
    Right click `root` partition, then click `Resize/Move`.
    ![Move data](images/extend-rootfs/gparted09.png)

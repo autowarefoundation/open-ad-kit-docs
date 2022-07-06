@@ -2,9 +2,9 @@
 
 ## Overview
 
-This instruction explans how to perform system setup for test execution on AVA platform.
+This instruction explains how to perform system setup for test execution on AVA platform.
 
-You need to copy docker images and neccesary files.
+You need to copy docker images and necessary files.
 
 ## Access to AVA platform via SSH
 
@@ -29,7 +29,7 @@ The docker image of Autoware.Auto is registered in [GitLab Container Registry](h
    docker pull registry.gitlab.com/autowarefoundation/autoware.auto/autowareauto/arm64/openadkit-foxy:latest
    ```
 
-## Copy neccesary files to USB drive
+## Copy necessary files to USB drive
 
 1. Copy files related to **map contents**.
 
@@ -134,7 +134,7 @@ You need to change the element `NetworkInterfaceAddress` to the network interfac
           valid_lft forever preferred_lft forever
    ```
 
-   :speech_balloon: You can find inetwork interface such as `enP4p4s0`.
+   :speech_balloon: You can find a network interface such as `enP4p4s0`.
 
 1. Change the `NetworkInterfaceAddress`.
 
