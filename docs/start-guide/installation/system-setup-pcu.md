@@ -143,7 +143,7 @@ You need to change the element `NetworkInterfaceAddress` to the network interfac
    5: fm1-sw: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq master br0 state UP group default qlen 1000
       link/ether 00:04:7c:2e:01:90 brd ff:ff:ff:ff:ff:ff
       inet6 fe80::204:7cff:fe2e:190/64 scope link
-          alid_lft forever preferred_lft forever
+         valid_lft forever preferred_lft forever
    6: fm1-mac10: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq master br0 state DOWN group default qlen 1000
       link/ether 00:04:7c:2e:01:90 brd ff:ff:ff:ff:ff:ff
    7: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
