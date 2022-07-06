@@ -7,7 +7,7 @@ This page explains how to set up the development environment that are described 
 ## Minimum requirements
 
 - Developer Platform:
-  - [AVA Platform](https://www.ipi.wiki/pages/com-hpc-altra) or [PCU Platform](TODO)
+  - [AVA Platform](https://www.ipi.wiki/pages/com-hpc-altra) or PCU Platform
 - In-Vehicle Development Platform [^1]: TODO
 - Software Tool:
   - Scenario simulator version x.x [^2]
