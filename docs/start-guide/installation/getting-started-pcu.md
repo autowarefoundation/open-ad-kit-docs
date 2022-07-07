@@ -122,7 +122,7 @@ The default username, password and IP address of PCU is as below:
 
    Please set parameters as follows, `Device` shall be chosen based on your host PC.
 
-   ![PCU Interface Front](images/getting-started-pcu/ttyusb-parameters.png)
+   ![PCU Interface Front](images/getting-started-pcu/tty-usb-parameters.png)
 
    For other system users, the parameters are:
 
