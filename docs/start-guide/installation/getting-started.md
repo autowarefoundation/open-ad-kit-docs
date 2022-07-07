@@ -57,4 +57,4 @@ If you are using [AVA Developer Platform](https://www.ipi.wiki/pages/com-hpc-alt
 
   - You need to use 32GB USB, not 64GB USB to flash yocto image.
 
-    :warning: Do not use 64GB USB because bios gets stuck due to EDKII bug.
+    :warning: Do not use 64GB USB because bios gets stuck due to EDK II bug.
