@@ -3,7 +3,6 @@ extends: default
 ignore: |
   .clang-tidy
   *.param.yaml
-  *.map_publisher.yaml
 
 rules:
   braces:
