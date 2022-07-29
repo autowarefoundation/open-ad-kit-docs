@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://autowarefoundation.github.io/open-ad-kit-docs/main/start-guide/how-to-run-simulators/scenario-simulator/run-on-local-env/">
       
       <link rel="icon" href="../../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.9">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
@@ -489,6 +489,8 @@
         
           
         
+          
+        
       
       
         
@@ -589,25 +591,12 @@
     Minimum requirements
   </a>
   
-    <nav class="md-nav" aria-label="Minimum requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-set-up-a-simulation-on-the-developer-platform" class="md-nav__link">
-    1. Set up a simulation on the developer platform
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#2-run-the-scenario-simulator-on-the-developer-platform" class="md-nav__link">
-    2. Run the scenario simulator on the developer platform
+      
+        <li class="md-nav__item">
+  <a href="#run-visualization-and-scenario-simulator-on-the-developer-platform" class="md-nav__link">
+    Run visualization and scenario simulator on the developer platform
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -679,6 +668,57 @@
     <li class="md-nav__item">
       <a href="../../logging-simulator/run-on-cloud-env/" class="md-nav__link">
         Run on the cloud platform
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2_4_4" type="checkbox" id="__nav_2_4_4" checked>
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_4">
+          Limitations and issues
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Limitations and issues" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Limitations and issues
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../limitations-and-issues/limitations-and-issues/" class="md-nav__link">
+        Limitations and issues
       </a>
     </li>
   
@@ -824,25 +864,12 @@
     Minimum requirements
   </a>
   
-    <nav class="md-nav" aria-label="Minimum requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-set-up-a-simulation-on-the-developer-platform" class="md-nav__link">
-    1. Set up a simulation on the developer platform
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#2-run-the-scenario-simulator-on-the-developer-platform" class="md-nav__link">
-    2. Run the scenario simulator on the developer platform
+      
+        <li class="md-nav__item">
+  <a href="#run-visualization-and-scenario-simulator-on-the-developer-platform" class="md-nav__link">
+    Run visualization and scenario simulator on the developer platform
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -874,10 +901,48 @@
 <li>Container Image: TODO</li>
 <li>Data Pipeline: TODO</li>
 </ul>
-<h3 id="1-set-up-a-simulation-on-the-developer-platform">1. Set up a simulation on the developer platform<a class="headerlink" href="#1-set-up-a-simulation-on-the-developer-platform" title="Permanent link">#</a></h3>
-<p>TODO</p>
-<h3 id="2-run-the-scenario-simulator-on-the-developer-platform">2. Run the scenario simulator on the developer platform<a class="headerlink" href="#2-run-the-scenario-simulator-on-the-developer-platform" title="Permanent link">#</a></h3>
-<p>TODO</p>
+<h2 id="run-visualization-and-scenario-simulator-on-the-developer-platform">Run visualization and scenario simulator on the developer platform<a class="headerlink" href="#run-visualization-and-scenario-simulator-on-the-developer-platform" title="Permanent link">#</a></h2>
+<ol>
+<li>
+<p>Run Rviz.</p>
+<p>You already cloned Autoware.Auto repository, navigate to the cloned directory.</p>
+<ol>
+<li>
+<p>Launch ADE.</p>
+<div class="highlight"><pre><span></span><code><span class="go">cd ~/adehome/AutowareAuto</span>
+<span class="go">ade --rc .aderc-amd64-foxy-lgsvl start --update --enter</span>
+</code></pre></div>
+</li>
+<li>
+<p>Launch visualization in ADE.</p>
+<div class="highlight"><pre><span></span><code><span class="go">source /opt/AutowareAuto/setup.bash</span>
+<span class="go">ros2 launch autoware_auto_launch autoware_auto_visualization.launch.py</span>
+</code></pre></div>
+</li>
+</ol>
+</li>
+<li>
+<p>Find docker image id.</p>
+<div class="highlight"><pre><span></span><code><span class="go">docker image ls</span>
+<span class="go">REPOSITORY                                                                            TAG                                                                           IMAGE ID       CREATED       SIZE</span>
+<span class="go">registry.gitlab.com/autowarefoundation/autoware.auto/autowareauto/amd64/binary-foxy   master                                                                        91512aa9e485   3 days ago    176MB</span>
+<span class="go">registry.gitlab.com/autowarefoundation/autoware.auto/autowareauto/amd64/ade-foxy      master                                                                        0d9978b7113d   4 days ago    5.74GB</span>
+<span class="go">scenario_simulator                                                                    open_ad_kit-autoware-auto-planning_sim_v2-20211111234534-88ea1196cdc0-2zv2o   d766a256a8c3   11 days ago   5.95GB</span>
+<span class="go">registry.gitlab.com/autowarefoundation/autoware.auto/ade-lgsvl/foxy                   2021.3                                                                        077c172fa5b9   5 weeks ago   379MB</span>
+</code></pre></div>
+<p>You can find id such as <code>d766a256a8c3</code>.</p>
+</li>
+<li>
+<p>Launch scenario simulator.</p>
+<p>Replace <code>/home/foo</code> with your home directory.</p>
+<p>Replace <code>d766a256a8c3</code> with your docker image id.</p>
+<div class="highlight"><pre><span></span><code><span class="go">docker run --rm -it --net host -v /home/foo/scenario:/scenario -v /home/foo/cyclonedds:/etc/cyclonedds d766a256a8c3 /bin/bash -c &quot;export CYCLONEDDS_URI=file:///etc/cyclonedds/cyclonedds.xml; export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp; source install/setup.bash; ros2 launch scenario_test_runner scenario_test_runner.launch.py sensor_model:=aip_xx1 vehicle_model:=lexus launch_autoware:=false architecture_type:=awf/auto scenario:=/scenario/scenario_e3b743e7-110c-4db6-b136-e5ffd5538315_2.yml&quot;</span>
+</code></pre></div>
+</li>
+</ol>
+<p>Now you can see...</p>
+<p><a href="../../installation/images/run-autoware/scenario_e3b743e7-110c-4db6-b136-e5ffd5538315_2.mp4">DEMO Video</a></p>
+<p><img alt="DEMO" src="../../../installation/images/run-autoware/demo.png" /></p>
 <!-- prettier-ignore -->
 <div class="footnote">
 <hr />
