@@ -2,3 +2,4 @@ nav:
   - index.md
   - scenario-simulator
   - logging-simulator
+  - limitations-and-issues

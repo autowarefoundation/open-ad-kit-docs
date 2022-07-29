@@ -6,6 +6,9 @@
     },
     {
       "pattern": "^https://github.com/.*/discussions/new"
+    },
+    {
+      "pattern": "https://account.tier4.jp/"
     }
   ],
   "retryOn429": true,
