@@ -1,0 +1,3 @@
+# Avoid collisions
+
+TODO
