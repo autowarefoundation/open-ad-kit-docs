@@ -12,7 +12,7 @@ TODO(Tier IV): Write the details based on the following materials.
 
 - [Autoware.Auto](https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/design.html)
 - [autoware_auto_msgs](https://gitlab.com/autowarefoundation/autoware.auto/autoware_auto_msgs)
-- [Tier IV's proposal document](https://github.com/tier4/autoware.proj/blob/main/docs/design/software_architecture/Overview.md)
+- [Tier IV's proposal document](https://autowarefoundation.github.io/autoware-documentation/main/)
 - [Tier IV's proposal implementation](https://github.com/tier4/AutowareArchitectureProposal.iv/commits/use-autoware-auto-msgs)
 
 ### Map
