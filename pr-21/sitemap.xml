@@ -71,6 +71,71 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-21/application-example/driverless-bus/operational-concept/adaptive-cruise-control/</loc>
+         <lastmod>2022-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-21/application-example/driverless-bus/operational-concept/avoid-collisions/</loc>
+         <lastmod>2022-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-21/application-example/driverless-bus/operational-concept/daytime-operation/</loc>
+         <lastmod>2022-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-21/application-example/driverless-bus/operational-concept/follow-a-route/</loc>
+         <lastmod>2022-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-21/application-example/driverless-bus/operational-concept/interact-with-other-vehicle-on-the-public-roads/</loc>
+         <lastmod>2022-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-21/application-example/driverless-bus/operational-concept/interact-with-traffic-lights/</loc>
+         <lastmod>2022-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-21/application-example/driverless-bus/operational-concept/lane-keeping-and-changing-lanes/</loc>
+         <lastmod>2022-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-21/application-example/driverless-bus/operational-concept/let-passengers-on-and-off-at-bus-stops/</loc>
+         <lastmod>2022-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-21/application-example/driverless-bus/operational-concept/nighttime-operation/</loc>
+         <lastmod>2022-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-21/application-example/driverless-bus/operational-concept/operation-mode/</loc>
+         <lastmod>2022-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-21/application-example/driverless-bus/operational-concept/predict-pedestrian-stepping-into-the-road/</loc>
+         <lastmod>2022-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-21/application-example/driverless-bus/operational-concept/set-service-route-via-HMI-on-the-vehicle/</loc>
+         <lastmod>2022-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-21/application-example/driverless-bus/operational-concept/take-over-request-to-the-operator/</loc>
+         <lastmod>2022-08-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-21/application-example/driverless-bus/operational-environment-requirement/</loc>
          <lastmod>2022-08-04</lastmod>
          <changefreq>daily</changefreq>
