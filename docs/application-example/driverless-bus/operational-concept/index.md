@@ -9,6 +9,7 @@ Operational Concept (OpsCon) of the Passenger Transportation System in the urban
 1. [Avoid collisions](./avoid-collisions/index.md)
 1. [Set service route via HMI on the vehicle](./set-service-route-via-HMI-on-the-vehicle/index.md)
 1. [Interact with other vehicles on the public roads](./interact-with-other-vehicle-on-the-public-roads/index.md)
+1. [Interact with emergency vehicles](./interact-with-emergency-vehicles/index.md)
 1. [Interact with traffic lights](./interact-with-traffic-lights/index.md)
 1. [Operation mode](./operation-mode/index.md)
 1. [Take over request to the operator](./take-over-request-to-the-operator/index.md)

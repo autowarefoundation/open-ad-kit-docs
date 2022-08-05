@@ -7,6 +7,7 @@ nav:
   - avoid-collisions
   - set-service-route-via-HMI-on-the-vehicle
   - interact-with-other-vehicle-on-the-public-roads
+  - interact-with-emergency-vehicles
   - interact-with-traffic-lights
   - operation-mode
   - take-over-request-to-the-operator
