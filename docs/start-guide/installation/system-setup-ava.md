@@ -39,7 +39,7 @@ The docker image of Autoware.Auto is registered in [GitLab Container Registry](h
    - :page_facing_up:[pointcloud_map.pcd](map/kashiwanoha/pointcloud_map.pcd)
    - :page_facing_up:[global_map_center.pcd.yaml](map/kashiwanoha/global_map_center.pcd.yaml)
    - :page_facing_up:[lanelet2_map_provider.osm.yaml](map/kashiwanoha/lanelet2_map_provider.osm.yaml)
-   - :page_facing_up:[map_publisher.param.yaml](map/kashiwanoha/map_publisher.param.yaml)
+   - :page_facing_up:[map.map_publisher.yaml](map/kashiwanoha/map.map_publisher.yaml)
 
    Copy files to your USB drive as the following directory structure.
 
