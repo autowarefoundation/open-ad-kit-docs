@@ -4,12 +4,7 @@
 
 _Reference: [Project Quickstart — EWAOL documentation](https://ewaol.sites.arm.com/meta-ewaol/quickstart.html)_
 
-This instruction explain how to build yocto image with EWAOL on your host machine.
-If you are using [AVA Developer Platform](https://www.ipi.wiki/pages/com-hpc-altra), you can also download built image from ADLINK's website, and you can skip this steps;
-
-- [AVA Developer Platform Downloads – I-Pi SMARC](https://www.ipi.wiki/pages/download-ava-developer-platform)
-  ![Downloads](images/getting-started/downloads.png)
-  :white_check_mark: `Yocto with SOAFEE` is preferred.
+This instruction explains how to build yocto image with EWAOL on your host machine.
 
 ## Build Host Setup
 
@@ -30,14 +25,14 @@ If you are using [AVA Developer Platform](https://www.ipi.wiki/pages/com-hpc-alt
 1. [ADLINK / meta-adlink-ampere](https://github.com/ADLINK/meta-adlink-ampere)
 
    ```console
-   git clone https://github.com/ADLINK/meta-adlink-ampere.git
+   git clone https://github.com/ADLINK/meta-adlink-ampere.git -b v1.4
    ```
 
 1. [EWAOL / meta-ewaol](https://git.gitlab.arm.com/ewaol/meta-ewaol)
 
    ```console
    cd meta-adlink-ampere
-   git clone https://git.gitlab.arm.com/ewaol/meta-ewaol.git
+   git clone https://git.gitlab.arm.com/ewaol/meta-ewaol.git -b v0.2.4
    ```
 
 1. Build via kas

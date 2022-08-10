@@ -4,52 +4,94 @@
 
 This instruction explains how to perform system setup for test execution on your host.
 
-You need to copy docker images and necessary files, and checkout Autoware.Auto.
+You need to copy docker images and necessary files.
 
-## Copy scenario simulator image to your host machine
+## Download scenario simulator image to your host machine
 
-The docker image of scenario simulator is registered in [docker hub](https://hub.docker.com/r/tier4/scenario_simulator_v2/tags).
-![docker hub](images/system-setup-host/docker-hub.png)
+The docker image of scenario simulator is registered in [GitHub Container Registry](https://github.com/tier4/scenario_simulator_v2/pkgs/container/scenario_simulator_v2)
 
 1. Copy docker image to your host machine.
 
    ```console
-   docker pull tier4/scenario_simulator_v2:open_ad_kit-amd64-foxy
+   docker pull ghcr.io/tier4/scenario_simulator_v2:galactic
    ```
 
-## Copy necessary files to your host machine
+## Install nvidia-docker2 & Rocker
 
-1. Copy **scenario** files for scenario simulator.
+   In this test, we try to run rviz inside docker, so please install nvidia-docker2 & Rocker.
 
-   Files are placed in the directory :file_folder:[docs/Appendix/Open-AD-Kit-Start-Guide/scenario](scenario)
+   :speech_balloon: This is quoted from [Scenario testing framework for Autoware: Run on Docker](https://tier4.github.io/scenario_simulator_v2-docs/user_guide/RunWithDocker/)
 
-   **[Currently placed]**
-
-   - :page_facing_up:[UC-001-0001-Kashiwa:2](scenario/scenario_e3b743e7-110c-4db6-b136-e5ffd5538315_2.yml)
-   - :page_facing_up:[UC-001-0018-Kashiwa:1](scenario/scenario_a7effa60-c07d-4df4-b082-bc0d6cbae825_1.yml)
-
-   Copy the scenario files to your `home` directory as the following directory structure.
-
-   ![Home Scenario](images/system-setup-host/home_scenario.png)
-
-1. Copy configuration file of **Cyclone DDS**.
-
-   You also need to copy `cyclonedds.xml` to your `home` directory.
-
-   ![Home Cyclone DDS](images/system-setup-host/home_cyclonedds.png)
-
-1. Copy **kernel configuration** file to `/etc/sysctl.d`.
-
-   You also need to copy `60_cyclonedds.conf` to `/etc/sysctl.d` directory in your host as well.
+1. If you have NVIDIA GPU(s) in your machine, you have to install nvidia-driver and nvidia-docker2.
 
    ```console
-   cp 60_cyclonedds.conf /etc/sysctl.d
+   curl -s -L https://nvidia.github.io/nvidia-container-runtime/gpgkey | sudo apt-key add -
+   curl -s -L https://nvidia.github.io/nvidia-container-runtime/ubuntu20.04/nvidia-container-runtime.list | \
+     sudo tee /etc/apt/sources.list.d/nvidia-container-runtime.list
+   sudo apt-get update
+   sudo apt install -y nvidia-docker2
+   sudo systemctl restart docker.service
+   ```
+
+1. Install Rocker
+
+   ```console
+   sudo pip3 install git+https://github.com/osrf/rocker.git
+   ```
+
+## Download map and scenario files
+
+1. Download from Google Drive.
+
+    ```console
+    wget "https://drive.google.com/uc?export=download&id=1vWMLbmwJJE5tYO40ypCMxqtmgQPQxhiw&confirm=t&uuid=3d84d854-3dd2-4950-8cc8-248feeab547d" -O sample_data.zip
+    ```
+
+1. Unzip it.
+
+   ```console
+   unzip sample_data.zip
+   ```
+
+1. Open the scenario file named `t4v2.yaml` in `sample_data`.
+
+   ![t4v2.yaml](images/system-setup-host/t4v2.yaml.png)
+
+1. Change the path to `lanelet2_map.osm` and `pointcloud_map.pcd`.
+
+   ![Edit t4v2.yaml](images/system-setup-host/edit.t4v2.yaml.png)
+
+## Download **kernel configuration** file for tuning kernel parameters
+
+We have to reconfigure kernel parameters by using `sysctl` for system stability.
+
+1. Download.
+
+   ```console
+   wget -P /etc/sysctl.d https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v1.5/docs/start-guide/installation/sysctl.d/60_cyclonedds.conf
    ```
 
 1. Update kernel parameters.
 
    ```console
    sysctl -p /etc/sysctl.d/60_cyclonedds.conf
+   ```
+
+## Download configuration file of Cyclone DDS
+
+In this test, we are using Cyclone DDS, so you also need to download configuration file of Cyclone DDS.
+
+1. Create directory named `cyclonedds`.
+
+   ```console
+   mkdir cyclonedds
+   ```
+
+1. Download `cyclonedds.xml`.
+
+   ```console
+   cd cyclonedds
+   wget https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v1.5/docs/start-guide/installation/cyclonedds/cyclonedds.xml
    ```
 
 ## Modify `cyclonedds.xml`
@@ -100,37 +142,4 @@ You need to change the element `NetworkInterfaceAddress` to the network interfac
    +  <NetworkInterfaceAddress>enp0s31f6</NetworkInterfaceAddress>
     </General>
 
-   ```
-
-## Setup ADE
-
-**In general, Autoware.Auto runs by using the Agile Development Environment (ADE), so we need to install ADE.**
-
-In this test, we use launch file placed in Autoware.Auto to run visualization quickly and easily.
-
-1. Install ADE on AVA platform by following the instructions; [Installation — ADE 4.4.0dev documentation](https://ade-cli.readthedocs.io/en/latest/install.html)
-
-   Download and setup ADE.
-
-   ```console
-   wget https://gitlab.com/ApexAI/ade-cli/-/jobs/1341322852/artifacts/raw/dist/ade+aarch64 -O ade
-   chmod +x ade
-   mv ade /usr/bin/
-   ```
-
-1. Setup ADE home directory by following the instructions; [Installation with ADE](https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/installation-ade.html)
-
-   ```console
-   mkdir -p ~/adehome
-   cd ~/adehome
-   touch .adehome
-   ```
-
-## Checkout Autoware.Auto
-
-1. Get Autoware.Auto on your host.
-
-   ```console
-   cd ~/adehome
-   git clone https://gitlab.com/autowarefoundation/autoware.auto/AutowareAuto.git
    ```
