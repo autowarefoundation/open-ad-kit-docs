@@ -8,7 +8,7 @@ You need to copy docker images and necessary files.
 
 ## Download scenario simulator image to your host machine
 
-The docker image of scenario simulator is registered in [tier4 / scenario_simulator_v2: GitHub Container Registry](https://github.com/tier4/scenario_simulator_v2/pkgs/container/scenario_simulator_v2)
+The docker image of scenario simulator is registered in [tier4/scenario_simulator_v2: GitHub Container Registry](https://github.com/tier4/scenario_simulator_v2/pkgs/container/scenario_simulator_v2)
 
 1. Copy docker image to your host machine.
 
