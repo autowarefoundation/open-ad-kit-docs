@@ -10,11 +10,11 @@ These contents will be updated for Open AD Kit version 2.0."
   - [AVA Platform](https://www.ipi.wiki/pages/com-hpc-altra) or PCU Platform
 - In-Vehicle Development Platform [^1]: TODO
 - Software Tool:
-  - Scenario simulator version x.x [^2]
-  - Rviz version x.x [^2]
+  - Scenario simulator version 0.6.5+ [^2]
+  - Rviz version 8.5.1 [^2]
 - Container Image:
-  - [Autoware.Auto for arm64](https://github.com/autowarefoundation/autoware/pkgs/container/autoware-universe/26844652?tag=galactic-latest-prebuilt-cuda-arm64)
-  - [Scenario simulator for x86_64](https://github.com/autowarefoundation/autoware/pkgs/container/autoware-universe/26944750?tag=galactic-latest-prebuilt-cuda) [^2]
+  - [Autoware.Universe for arm64](https://github.com/autowarefoundation/autoware/pkgs/container/autoware-universe/30821188?tag=galactic-20220728-prebuilt-cuda)
+  - [Scenario simulator for x86_64](https://github.com/tier4/scenario_simulator_v2/pkgs/container/scenario_simulator_v2) [^2]
 
 [^1]: This is unnecessary if you do NOT need a vehicle-edge platform.
 [^2]: This is unnecessary if you can use the cloud development platform, Web.Auto.
