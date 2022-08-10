@@ -8,7 +8,7 @@ You need to copy docker images and necessary files.
 
 ## Download scenario simulator image to your host machine
 
-The docker image of scenario simulator is registered in [GitHub Container Registry](https://github.com/tier4/scenario_simulator_v2/pkgs/container/scenario_simulator_v2)
+The docker image of scenario simulator is registered in [tier4 / scenario_simulator_v2: GitHub Container Registry](https://github.com/tier4/scenario_simulator_v2/pkgs/container/scenario_simulator_v2)
 
 1. Copy docker image to your host machine.
 
@@ -20,7 +20,7 @@ The docker image of scenario simulator is registered in [GitHub Container Regist
 
    In this test, we try to run rviz inside docker, so please install nvidia-docker2 & Rocker.
 
-   :speech_balloon: This is quoted from [Scenario testing framework for Autoware: Run on Docker](https://tier4.github.io/scenario_simulator_v2-docs/user_guide/RunWithDocker/)
+   _This is quoted from [Scenario testing framework for Autoware: Run on Docker](https://tier4.github.io/scenario_simulator_v2-docs/user_guide/RunWithDocker/)_
 
 1. If you have NVIDIA GPU(s) in your machine, you have to install nvidia-driver and nvidia-docker2.
 
@@ -68,7 +68,7 @@ We have to reconfigure kernel parameters by using `sysctl` for system stability.
 1. Download.
 
    ```console
-   wget -P /etc/sysctl.d https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v1.5/docs/start-guide/installation/sysctl.d/60_cyclonedds.conf
+   sudo wget -P /etc/sysctl.d https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v1.5/docs/start-guide/installation/sysctl.d/60_cyclonedds.conf
    ```
 
 1. Update kernel parameters.

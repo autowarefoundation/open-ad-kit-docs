@@ -2,7 +2,7 @@
 
 This page explains how to set up the development environment that are described in the System Configuration chapter.
 
-These contents will be updated for Open AD Kit version 2.0."
+"These contents will be updated for Open AD Kit version 2.0."
 
 ## Minimum requirements
 

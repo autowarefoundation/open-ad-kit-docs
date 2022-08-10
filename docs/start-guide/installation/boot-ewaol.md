@@ -20,7 +20,7 @@ Remove M.2 SSD from AVA platform and flash yocto image to it directly.
    lsblk -p
    NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
    ...
-   /dev/sda        8:0  0 119.2G  0 disk
+   /dev/sda      8:0  0 119.2G  0 disk
    ├─sda1        8:1  0   512M  0 part
    ├─sda2        8:2  0     1G  0 part /media/foo/7d00c690-db24-462d-8c8d-dce7bdf151d8
    └─sda3        8:3  0 117.8G  0 part
