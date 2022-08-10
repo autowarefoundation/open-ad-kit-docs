@@ -76,7 +76,7 @@ We have to reconfigure kernel parameters by using `sysctl` for system stability.
    ```console
    sysctl -p /etc/sysctl.d/60_cyclonedds.conf
    ```
-
+<!-- Maybe rhe following steps are not needed 
 ## Download configuration file of Cyclone DDS
 
 In this test, we are using Cyclone DDS, so you also need to download configuration file of Cyclone DDS.
@@ -143,3 +143,4 @@ You need to change the element `NetworkInterfaceAddress` to the network interfac
     </General>
 
    ```
+   -->
