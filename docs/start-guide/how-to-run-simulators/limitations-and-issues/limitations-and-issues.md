@@ -2,12 +2,13 @@
 
 ## Limitations
 
-- Simulation by using LGSVL is not supported because a map for scenario simulator (`kashiwanoha`) is not registered in LGSVL Simulator Content Store.
+- Autoware doesn't work with the latest version of yocto packages. Please use the old version.
+
+  |package|used|latest|
+  |---|---|---|
+  |meta-adlink-ampere|v1.4|v2.1|
+  |meta-ewaol|v0.2.4|v1.0|
 
 ## Issues
 
-- The ego vehicle drives slowly.
-
-- `UC-001-0018-Kashiwa:1` failed with simulation timeout. The ego vehicle gets stuck after NPC crossed ahead of the ego vehicle. This might be caused by the slow driving.
-
-  ![Home Cyclone DDS](../../installation/images/limitations-issues/scenario_1.png)
+None
