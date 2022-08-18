@@ -5,5 +5,5 @@ This page describes how to run simulators that work on your local environment an
 - [Scenario simulator](scenario-simulator/run-on-local-env.md) verifies your planning algorithms.
 - [Logging simulator](logging-simulator/run-on-cloud-env.md) verifies your perception algorithms with ROSBAG data that are recorded beforehand.
 
-- [Troubleshooting](troubleshooting.md/troubleshooting.md)
+- [Troubleshooting](troubleshooting/troubleshooting.md)
 - [limitations and issues](limitations-and-issues/limitations-and-issues.md)
