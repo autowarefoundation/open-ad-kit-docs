@@ -23,7 +23,7 @@ Autoware.Universe runs as k3s clusters in Open AD Kit, so please download kubern
 1. Download.
 
    ```console
-   wget https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v2.0/docs/start-guide/installation/deployments/comhpc-deployments.zip
+   wget https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/proposal_v2.0/docs/start-guide/installation/deployments/comhpc-deployments.zip
    ```
 
 1. Unzip it.
@@ -85,7 +85,7 @@ We have to reconfigure kernel parameters by using `sysctl` for system stability.
 1. Download.
 
    ```console
-   wget -P /etc/sysctl.d https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v2.0/docs/start-guide/installation/sysctl.d/60_cyclonedds.conf
+   wget -P /etc/sysctl.d https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/proposal_v2.0/docs/start-guide/installation/sysctl.d/60_cyclonedds.conf
    ```
 
 1. Update kernel parameters.
@@ -101,7 +101,7 @@ In this test, we are using Cyclone DDS, so you also need to download configurati
 1. Download `cyclonedds.xml`.
 
    ```console
-   wget -P ~/cyclonedds https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v2.0/docs/start-guide/installation/cyclonedds/cyclonedds.xml
+   wget -P ~/cyclonedds https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/proposal_v2.0/docs/start-guide/installation/cyclonedds/cyclonedds.xml
    ```
 
 ## Modify `cyclonedds.xml`
