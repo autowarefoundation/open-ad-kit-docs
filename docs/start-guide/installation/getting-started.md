@@ -51,8 +51,6 @@ This instruction explains how to build yocto image with EWAOL on your host machi
 
     meta-adlink-ampere:
 
-    meta-xl4esync-soafee:
-       path: meta-xl4esync-soafee
 
 
     machine: ava
