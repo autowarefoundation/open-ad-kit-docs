@@ -41,14 +41,14 @@ This page explains how to run Autoware on the development platform that are set 
 
    ```console
    root@comhpc:~# kubectl get pod -o wide
-   NAME                                READY   STATUS    RESTARTS   AGE    IP              NODE     NOMINATED NODE   READINESS GATES
-   comhpc-control-58cb5b9dbd-fqckv     1/1     Running   0          104m   192.168.10.27   comhpc   <none>           <none>
-   comhpc-api-7b588f7988-n4rb7         1/1     Running   0          103m   192.168.10.27   comhpc   <none>           <none>
-   comhpc-planning-d964b9646-92rzc     1/1     Running   0          104m   192.168.10.27   comhpc   <none>           <none>
-   comhpc-simulator-7f5b9fb97d-7kvqm   1/1     Running   0          104m   192.168.10.27   comhpc   <none>           <none>
-   comhpc-map-7867476c98-mgrm5         1/1     Running   0          103m   192.168.10.27   comhpc   <none>           <none>
-   comhpc-system-c5599d5b-xxhg2        1/1     Running   0          103m   192.168.10.27   comhpc   <none>           <none>
-   comhpc-vehicle-9d6b5b9b8-k95q9      1/1     Running   0          103m   192.168.10.27   comhpc   <none>           <none>
+   NAME                                READY   STATUS    RESTARTS   AGE    IP              NODE   NOMINATED NODE   READINESS GATES
+   comhpc-control-58cb5b9dbd-fqckv     1/1     Running   0          104m   192.168.10.27   ava    <none>           <none>
+   comhpc-api-7b588f7988-n4rb7         1/1     Running   0          103m   192.168.10.27   ava    <none>           <none>
+   comhpc-planning-d964b9646-92rzc     1/1     Running   0          104m   192.168.10.27   ava    <none>           <none>
+   comhpc-simulator-7f5b9fb97d-7kvqm   1/1     Running   0          104m   192.168.10.27   ava    <none>           <none>
+   comhpc-map-7867476c98-mgrm5         1/1     Running   0          103m   192.168.10.27   ava    <none>           <none>
+   comhpc-system-c5599d5b-xxhg2        1/1     Running   0          103m   192.168.10.27   ava    <none>           <none>
+   comhpc-vehicle-9d6b5b9b8-k95q9      1/1     Running   0          103m   192.168.10.27   ava    <none>           <none>
    ```
 
 ## 2. Run Autoware on the in-vehicle development platform

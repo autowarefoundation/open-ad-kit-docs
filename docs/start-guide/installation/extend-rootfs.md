@@ -2,8 +2,8 @@
 
 ## Overview
 
-The rootfs partition is created with 5.2GB, but the size is too short to run docker container.
-So we have to extend rootfs partition, or create new partition and assign the whole docker folder to the new partition.
+The rootfs partition is not fully occupied on M.2 SSD, and the size is too short to run k3s clusters.
+So we have to extend rootfs partition.
 
 Here is the instruction how to extend rootfs partition
 
