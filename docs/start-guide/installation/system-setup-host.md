@@ -68,7 +68,7 @@ We have to reconfigure kernel parameters by using `sysctl` for system stability.
 1. Download.
 
    ```console
-   wget -P /etc/sysctl.d https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v1.5/docs/start-guide/installation/sysctl.d/60_cyclonedds.conf
+   wget -P /etc/sysctl.d https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v2.0/docs/start-guide/installation/sysctl.d/60_cyclonedds.conf
    ```
 
 1. Update kernel parameters.
@@ -81,17 +81,10 @@ We have to reconfigure kernel parameters by using `sysctl` for system stability.
 
 In this test, we are using Cyclone DDS, so you also need to download configuration file of Cyclone DDS.
 
-1. Create directory named `cyclonedds`.
-
-   ```console
-   mkdir cyclonedds
-   ```
-
 1. Download `cyclonedds.xml`.
 
    ```console
-   cd cyclonedds
-   wget https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v1.5/docs/start-guide/installation/cyclonedds/cyclonedds.xml
+   wget -P ~/cyclonedds https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v2.0/docs/start-guide/installation/cyclonedds/cyclonedds.xml
    ```
 
 ## Modify `cyclonedds.xml`

@@ -30,7 +30,7 @@ The setup procedure depends on the developer platform.
 ### AVA Platform
 
 1. [Getting started with EWAOL](./getting-started.md)
-1. [Boot EWAOL via SSD Boot](./boot-ewaol.md)
+1. [Boot EWAOL](./boot-ewaol.md)
 1. [Extend rootfs partition](./extend-rootfs.md)
 
 ### PCU Platform

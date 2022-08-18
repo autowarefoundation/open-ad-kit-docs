@@ -28,6 +28,6 @@ This page describes how to run the scenario simulator on the developer platform 
 
 Now you can see...
 
-[DEMO Video](../../installation/images/run-autoware/demo.mp4)
+[DEMO Video](https://user-images.githubusercontent.com/57388357/185083253-27234791-6f5e-47ce-baf8-454e0ca10140.mp4)
 
 ![DEMO](../../installation/images/run-autoware/demo.png)

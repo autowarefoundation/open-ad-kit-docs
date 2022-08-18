@@ -23,13 +23,13 @@ Autoware.Universe runs as k3s clusters in Open AD Kit, so please download kubern
 1. Download.
 
    ```console
-   wget https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v1.5/docs/start-guide/installation/deployments/comhpc-deployments.zip
+   wget https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v2.0/docs/start-guide/installation/deployments/comhpc-deployments.zip
    ```
 
 1. Unzip it.
 
    ```console
-   unzip comhpc-deployments.zip
+   unzip comhpc-deployments.zip -d comhpc-deployments
    ```
 
    :speech_balloon: You will see the following files are unzipped.
@@ -64,18 +64,18 @@ Autoware.Universe runs as k3s clusters in Open AD Kit, so please download kubern
 1. Move `map` directory from `sample_data`.
 
    ```console
-    mv sample_data/map/ ~/
+   mv sample_data/map/ ~/
    ```
 
    :speech_balloon: You will see the following files are located.
 
    ```console
-   root@comhpc:~# ls -la ~/map
+   root@ava:~# ls -la ~/map
    total 61288
-   drwxrwxr-x  2 root root     4096 Apr  8 10:32 .
-   drwx------ 10 root root     4096 Aug 10 07:57 ..
-   -rw-rw-r--  1 root root  1841436 Mar  7 09:27 lanelet2_map.osm
-   -rw-rw-r--  1 root root 60904720 Feb 28 22:14 pointcloud_map.pcd
+   drwxrwxr-x 2 root root     4096 Aug 18 06:23 .
+   drwx------ 6 root root     4096 Aug 18 06:23 ..
+   -rw-r--r-- 1 root root  1841436 Aug 18 06:23 lanelet2_map.osm
+   -rw-r--r-- 1 root root 60904720 Aug 18 06:23 pointcloud_map.pcd
    ```
 
 ## Download **kernel configuration** file for tuning kernel parameters
@@ -85,7 +85,7 @@ We have to reconfigure kernel parameters by using `sysctl` for system stability.
 1. Download.
 
    ```console
-   wget -P /etc/sysctl.d https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v1.5/docs/start-guide/installation/sysctl.d/60_cyclonedds.conf
+   wget -P /etc/sysctl.d https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v2.0/docs/start-guide/installation/sysctl.d/60_cyclonedds.conf
    ```
 
 1. Update kernel parameters.
@@ -98,17 +98,10 @@ We have to reconfigure kernel parameters by using `sysctl` for system stability.
 
 In this test, we are using Cyclone DDS, so you also need to download configuration file of Cyclone DDS.
 
-1. Create directory named `cyclonedds`.
-
-   ```console
-   mkdir cyclonedds
-   ```
-
 1. Download `cyclonedds.xml`.
 
    ```console
-   cd cyclonedds
-   wget https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v1.5/docs/start-guide/installation/cyclonedds/cyclonedds.xml
+   wget -P ~/cyclonedds https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/v2.0/docs/start-guide/installation/cyclonedds/cyclonedds.xml
    ```
 
 ## Modify `cyclonedds.xml`

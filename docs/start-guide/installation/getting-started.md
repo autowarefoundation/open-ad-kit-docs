@@ -25,31 +25,54 @@ This instruction explains how to build yocto image with EWAOL on your host machi
 1. [ADLINK / meta-adlink-ampere](https://github.com/ADLINK/meta-adlink-ampere)
 
    ```console
-   git clone https://github.com/ADLINK/meta-adlink-ampere.git -b v1.4
+   git clone https://github.com/ADLINK/meta-adlink-ampere.git -b v2.1
    ```
 
 1. [EWAOL / meta-ewaol](https://git.gitlab.arm.com/ewaol/meta-ewaol)
 
    ```console
    cd meta-adlink-ampere
-   git clone https://git.gitlab.arm.com/ewaol/meta-ewaol.git -b v0.2.4
+   git clone https://git.gitlab.arm.com/ewaol/meta-ewaol.git -b v1.0
+   ```
+
+1. Replace `virtualization` with `baremetal` in `ava.yml`.
+
+   ```diff
+    header:
+    version: 1
+    includes:
+       - repo: meta-ewaol
+   -     file: meta-ewaol-config/kas/virtualization.yml
+   +     file: meta-ewaol-config/kas/baremetal.yml
+
+    repos:
+    meta-ewaol:
+       path: meta-ewaol
+
+    meta-adlink-ampere:
+
+    meta-xl4esync-soafee:
+       path: meta-xl4esync-soafee
+
+
+    machine: ava
+
+    bblayers_conf_header:
+    base: |
+       POKY_BBLAYERS_CONF_VERSION = "2"
+       BBPATH = "${TOPDIR}"
+       BBFILES ?= ""
+
+    target:
+   -  - ewaol-virtualization-image
+   +  - ewaol-baremetal-image
    ```
 
 1. Build via kas
 
    ```console
-   kas build ComHpc.yml
+   kas build ava.yml
    ```
 
 :warning: You should be careful of utilizing full CPU power during build.
 ![Build](images/getting-started/build.png)
-
-**You can choose the way to boot EWAOL, SSD Boot(highly recommended) or USB Boot.**
-
-- :white_check_mark: **SSD Boot (highly recommended)**
-  - You need to use SSD enclosure case to flash yocto image to M.2 SSD directly.
-- USB Boot
-
-  - You need to use 32GB USB, not 64GB USB to flash yocto image.
-
-    :warning: Do not use 64GB USB because bios gets stuck due to EDK II bug.
