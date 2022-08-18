@@ -6,4 +6,4 @@ This page describes how to run simulators that work on your local environment an
 - [Logging simulator](logging-simulator/run-on-cloud-env.md) verifies your perception algorithms with ROSBAG data that are recorded beforehand.
 
 - [Troubleshooting](troubleshooting/troubleshooting.md)
-- [limitations and issues](limitations-and-issues/limitations-and-issues.md)
+- [Limitations and issues](limitations-and-issues/limitations-and-issues.md)
