@@ -25,7 +25,7 @@ This instruction explains how to build yocto image with EWAOL on your host machi
 1. [ADLINK / meta-adlink-ampere](https://github.com/ADLINK/meta-adlink-ampere)
 
    ```console
-   git clone https://github.com/ADLINK/meta-adlink-ampere.git -b v2.1
+   git clone https://github.com/ADLINK/meta-adlink-ampere.git -b kirkstone
    ```
 
 1. [EWAOL / meta-ewaol](https://git.gitlab.arm.com/ewaol/meta-ewaol)
