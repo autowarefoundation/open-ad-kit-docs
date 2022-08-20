@@ -110,6 +110,8 @@ You need to change the element `NetworkInterfaceAddress` to the network interfac
 
 1. Find network interface.
 
+   :speech_balloon: You can find a network interface such as `enP4p4s0`.
+
    ```console
    root@comhpc:~# ip a 
    1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
@@ -133,8 +135,7 @@ You need to change the element `NetworkInterfaceAddress` to the network interfac
       inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
          valid_lft forever preferred_lft forever
    ...
-
-   :speech_balloon: You can find a network interface such as `enP4p4s0`.
+   ```
 
 1. Change the `NetworkInterfaceAddress`.
 
