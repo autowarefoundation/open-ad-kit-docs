@@ -1,5 +1,4 @@
 nav:
-  - Introduction: index.md
-  - start-guide
-  - system-configuration
-  - application-example
+  - Home: index.md
+  - version-1.0
+  - version-2.0
