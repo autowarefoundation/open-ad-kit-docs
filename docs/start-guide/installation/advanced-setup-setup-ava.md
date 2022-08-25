@@ -79,7 +79,7 @@ This instruction explains how to install advanced software for AVA platform.
    +- ewaol-baremetal-sdk-image
    ```
 
-1. Build via kas
+1. Build via kas.
 
    ```console
    kas build ava.yml
@@ -95,7 +95,7 @@ sudo bmaptool copy --bmap build/tmp_baremetal/deploy/images/ava/ewaol-baremetal-
 
 ## Extend rootfs partition
 
-Follow the instructions [Extend rootfs partition](extend-rootfs.md)
+Follow the instructions [Extend rootfs partition](extend-rootfs.md).
 
 ## Boot your machine
 
