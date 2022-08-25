@@ -25,7 +25,7 @@ This instruction explains how to install advanced software for AVA platform.
 1. Download a missing patch in `meta-ewaol-ext` layer.
 
    ```console
-   wget -P /meta-adlink-ampere/meta-ewaol-ext/recipes-ewaol/recipes-container/nvidia-container-toolkit/file https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/proposal_v2.0/docs/start-guide/installation/patch/0002-TEMPORARY-force-aarch64-rpm.patch
+   wget -P ~/meta-adlink-ampere/meta-ewaol-ext/recipes-ewaol/recipes-container/nvidia-container-toolkit/files https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/proposal_v2.0/docs/start-guide/installation/patch/0002-TEMPORARY-force-aarch64-rpm.patch
    ```
 
 1. Modify `ava.yml`.
