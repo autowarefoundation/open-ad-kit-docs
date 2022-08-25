@@ -74,3 +74,11 @@ TODO
 ## 6. Run Autoware on the development platform
 
 Please refer to the [How to run Autoware](../how-to-run-autoware/index.md) section.
+
+## 7. Advanced setup
+
+THe instructions how to install advanced software such as desktop environment and NVIDIA driver.
+
+### AVA Platform
+
+1. [Advanced setup for AVA Platform](./advanced-setup-setup-ava.md)
