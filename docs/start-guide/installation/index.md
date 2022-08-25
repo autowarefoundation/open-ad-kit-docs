@@ -77,7 +77,7 @@ Please refer to the [How to run Autoware](../how-to-run-autoware/index.md) secti
 
 ## 7. Advanced setup
 
-THe instructions how to install advanced software such as desktop environment and NVIDIA driver.
+The instructions how to install advanced software such as desktop environment and NVIDIA driver.
 
 ### AVA Platform
 
