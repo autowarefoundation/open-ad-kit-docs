@@ -167,11 +167,11 @@ You can see XFCE desktop.
 
    ![Building kernel module](./images/advanced-setup-setup-ava/nvidia-driver-building.png)
 
-1. Press `OK`.
+1. Press :arrow_left: to select `Yes` and then press :leftwards_arrow_with_hook:.
 
    ![X configuration](./images/advanced-setup-setup-ava/nvidia-driver-x-configuration.png)
 
-1. Press `OK`.
+1. Press :leftwards_arrow_with_hook:.
 
    ![Installation completed](./images/advanced-setup-setup-ava/nvidia-driver-completed.png)
 
