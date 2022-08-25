@@ -67,7 +67,7 @@ This instruction explains how to install advanced software for AVA platform.
    +local_conf_header:
    +meta-at: |
    +   XSERVER:append = " xserver-xorg-extension-glx xserver-xorg-module-libwfb xserver-xorg-module-exa"
-   +   IMAGE_INSTALL:append = " packagegroup-core-x11 packagegroup-xfce-base acpid xf86-video-modesetting mesa-demos nvidia-container-toolkit"
+   +   IMAGE_INSTALL:append = " packagegroup-core-x11 packagegroup-xfce-extended acpid xf86-video-modesetting mesa-demos nvidia-container-toolkit"
    +   DISTRO_FEATURES:append = " opengl x11 glx"
    +   PACKAGECONFIG:append:pn-xserver-xorg = " xinerama"
    +   IMAGE_FEATURES:append =" x11 x11-base"
