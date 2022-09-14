@@ -1,5 +1,7 @@
 # Open AD Kit Documentation
 
+!!! note "The latest version is 2.0, but it has not been officially released yet."
+
 ## About Open AD Kit
 
 Open AD Kit aims to democratize autonomous drive (AD) systems by bringing the cloud and edge closer together. In doing so, Open AD Kit will lower the threshold for developing and deploying the Autoware software stack.
