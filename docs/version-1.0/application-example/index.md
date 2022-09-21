@@ -1,5 +1,3 @@
 # Application example
 
-This page shows application examples of Open AD Kit version 2.0.
-
-- [Driverless bus](./driverless-bus/index.md)
+There is no application example of Open AD Kit version 1.0.
