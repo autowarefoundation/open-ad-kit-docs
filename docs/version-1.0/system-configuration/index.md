@@ -1,3 +1,3 @@
-# Application example
+# System configuration
 
 TODO
