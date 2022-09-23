@@ -197,7 +197,7 @@ docker run --gpus all --rm nvidia/cuda-arm64:11.4.0-base nvidia-smi
 
 You can see the outputs like below.
 
-```
+```console
 root@ava:~# docker run --gpus all --rm nvidia/cuda-arm64:11.4.0-base nvidia-smi
 Unable to find image 'nvidia/cuda-arm64:11.4.0-base' locally
 11.4.0-base: Pulling from nvidia/cuda-arm64
