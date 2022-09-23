@@ -1,0 +1,19 @@
+diff --git a/docker/Dockerfile.centos b/docker/Dockerfile.centos
+index c5c70f3..d64414d 100644
+--- a/docker/Dockerfile.centos
++++ b/docker/Dockerfile.centos
+@@ -55,11 +55,12 @@ COPY oci-nvidia-hook.json $DIST_DIR/oci-nvidia-hook.json
+ WORKDIR $DIST_DIR/..
+ COPY packaging/rpm .
+ 
+-CMD arch=$(uname -m) && \
++CMD arch=aarch64 && \
+     rpmbuild --clean --target=$arch -bb \
+              -D "_topdir $PWD" \
+              -D "version $VERSION" \
+              -D "libnvidia_container_version ${VERSION}-${RELEASE}" \
+              -D "release $RELEASE" \
+              SPECS/nvidia-container-toolkit.spec && \
+-    mv RPMS/$arch/*.rpm /dist
++    mv RPMS/$arch/*.rpm /dist && \
++    chmod -R 777 /dist
