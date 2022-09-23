@@ -5,7 +5,7 @@ index c5c70f3..d64414d 100644
 @@ -55,11 +55,12 @@ COPY oci-nvidia-hook.json $DIST_DIR/oci-nvidia-hook.json
  WORKDIR $DIST_DIR/..
  COPY packaging/rpm .
- 
+
 -CMD arch=$(uname -m) && \
 +CMD arch=aarch64 && \
      rpmbuild --clean --target=$arch -bb \

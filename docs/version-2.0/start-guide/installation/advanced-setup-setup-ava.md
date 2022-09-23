@@ -53,7 +53,7 @@ This instruction explains how to install advanced software for AVA platform.
    +      meta-xfce:
    +
    +meta-ewaol-ext:
-   +   path: meta-ewaol-ext  
+   +   path: meta-ewaol-ext
 
 
     machine: ava
@@ -195,19 +195,20 @@ You can confirm nvidia-docker works by the following command.
 docker run --gpus all --rm nvidia/cuda-arm64:11.4.0-base nvidia-smi
 ```
 
-You can see the outputs like below. 
+You can see the outputs like below.
+
 ```
 root@ava:~# docker run --gpus all --rm nvidia/cuda-arm64:11.4.0-base nvidia-smi
 Unable to find image 'nvidia/cuda-arm64:11.4.0-base' locally
 11.4.0-base: Pulling from nvidia/cuda-arm64
-55c604a74c4b: Pull complete 
-657fae4b9575: Pull complete 
-b2cf3c1bfea9: Pull complete 
-71492f856142: Pull complete 
-c74b3fce51ac: Pull complete 
+55c604a74c4b: Pull complete
+657fae4b9575: Pull complete
+b2cf3c1bfea9: Pull complete
+71492f856142: Pull complete
+c74b3fce51ac: Pull complete
 Digest: sha256:625c8265d0f88d4250d48958113f1184f96db794fbe5d6d5cdd782f9916ec718
 Status: Downloaded newer image for nvidia/cuda-arm64:11.4.0-base
-Thu Aug 25 23:17:40 2022       
+Thu Aug 25 23:17:40 2022
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 515.65.01    Driver Version: 515.65.01    CUDA Version: 11.7     |
 |-------------------------------+----------------------+----------------------+
@@ -219,7 +220,7 @@ Thu Aug 25 23:17:40 2022
 |  0%   35C    P8    18W / 290W |    234MiB /  8192MiB |      0%      Default |
 |                               |                      |                  N/A |
 +-------------------------------+----------------------+----------------------+
-                                                                               
+
 +-----------------------------------------------------------------------------+
 | Processes:                                                                  |
 |  GPU   GI   CI        PID   Type   Process name                  GPU Memory |

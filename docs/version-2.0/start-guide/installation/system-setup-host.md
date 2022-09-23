@@ -18,9 +18,9 @@ The docker image of scenario simulator is registered in [GitHub Container Regist
 
 ## Install nvidia-docker2 & Rocker
 
-   In this test, we try to run rviz inside docker, so please install nvidia-docker2 & Rocker.
+In this test, we try to run rviz inside docker, so please install nvidia-docker2 & Rocker.
 
-   :speech_balloon: This is quoted from [Scenario testing framework for Autoware: Run on Docker](https://tier4.github.io/scenario_simulator_v2-docs/user_guide/RunWithDocker/)
+:speech_balloon: This is quoted from [Scenario testing framework for Autoware: Run on Docker](https://tier4.github.io/scenario_simulator_v2-docs/user_guide/RunWithDocker/)
 
 1. If you have NVIDIA GPU(s) in your machine, you have to install nvidia-driver and nvidia-docker2.
 
@@ -43,9 +43,9 @@ The docker image of scenario simulator is registered in [GitHub Container Regist
 
 1. Download from Google Drive.
 
-    ```console
-    wget "https://drive.google.com/uc?export=download&id=1vWMLbmwJJE5tYO40ypCMxqtmgQPQxhiw&confirm=t&uuid=3d84d854-3dd2-4950-8cc8-248feeab547d" -O sample_data.zip
-    ```
+   ```console
+   wget "https://drive.google.com/uc?export=download&id=1vWMLbmwJJE5tYO40ypCMxqtmgQPQxhiw&confirm=t&uuid=3d84d854-3dd2-4950-8cc8-248feeab547d" -O sample_data.zip
+   ```
 
 1. Unzip it.
 

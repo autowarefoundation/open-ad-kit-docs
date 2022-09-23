@@ -19,7 +19,7 @@ ssh root@192.168.0.62
 ## Download kubernetes yaml files
 
 Autoware.Universe runs as k3s clusters in Open AD Kit, so please download kubernetes yaml files to deploy Autoware to AVA platform.
-  
+
 1. Download.
 
    ```console
@@ -36,24 +36,24 @@ Autoware.Universe runs as k3s clusters in Open AD Kit, so please download kubern
 
    ```console
    Archive:  comhpc-deployments.zip
-     inflating: comhpc-api-deployment.yaml  
-     inflating: comhpc-control-deployment.yaml  
-     inflating: comhpc-map-deployment.yaml  
-     inflating: comhpc-persistent-volume.yaml  
-     inflating: comhpc-persistent-volume-claim.yaml  
-     inflating: comhpc-planning-deployment.yaml  
-     inflating: comhpc-simulator-deployment.yaml  
-     inflating: comhpc-system-deployment.yaml  
-     inflating: comhpc-vehicle-deployment.yaml  
+     inflating: comhpc-api-deployment.yaml
+     inflating: comhpc-control-deployment.yaml
+     inflating: comhpc-map-deployment.yaml
+     inflating: comhpc-persistent-volume.yaml
+     inflating: comhpc-persistent-volume-claim.yaml
+     inflating: comhpc-planning-deployment.yaml
+     inflating: comhpc-simulator-deployment.yaml
+     inflating: comhpc-system-deployment.yaml
+     inflating: comhpc-vehicle-deployment.yaml
    ```
 
 ## Download map files
 
 1. Download from Google Drive.
 
-    ```console
-    wget "https://drive.google.com/uc?export=download&id=1vWMLbmwJJE5tYO40ypCMxqtmgQPQxhiw&confirm=t&uuid=3d84d854-3dd2-4950-8cc8-248feeab547d" -O sample_data.zip
-    ```
+   ```console
+   wget "https://drive.google.com/uc?export=download&id=1vWMLbmwJJE5tYO40ypCMxqtmgQPQxhiw&confirm=t&uuid=3d84d854-3dd2-4950-8cc8-248feeab547d" -O sample_data.zip
+   ```
 
 1. Unzip it.
 
@@ -113,24 +113,24 @@ You need to change the element `NetworkInterfaceAddress` to the network interfac
    :speech_balloon: You can find a network interface such as `enP4p4s0`.
 
    ```console
-   root@comhpc:~# ip a 
+   root@comhpc:~# ip a
    1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
       link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
       inet 127.0.0.1/8 scope host lo
          valid_lft forever preferred_lft forever
-      inet6 ::1/128 scope host 
+      inet6 ::1/128 scope host
          valid_lft forever preferred_lft forever
    2: enP4p4s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
       link/ether 00:30:64:1a:0a:65 brd ff:ff:ff:ff:ff:ff
       inet 192.168.0.62/24 brd 192.168.0.255 scope global dynamic enP4p4s0
          valid_lft 3383sec preferred_lft 2933sec
-      inet6 fe80::1ab4:7a14:28e:4e61/64 scope link 
+      inet6 fe80::1ab4:7a14:28e:4e61/64 scope link
          valid_lft forever preferred_lft forever
-      inet6 fe80::230:64ff:fe1a:a65/64 scope link 
+      inet6 fe80::230:64ff:fe1a:a65/64 scope link
          valid_lft forever preferred_lft forever
    3: sit0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN group default qlen 1000
       link/sit 0.0.0.0 brd 0.0.0.0
-   4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+   4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
       link/ether 02:42:4b:b2:ee:68 brd ff:ff:ff:ff:ff:ff
       inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
          valid_lft forever preferred_lft forever
