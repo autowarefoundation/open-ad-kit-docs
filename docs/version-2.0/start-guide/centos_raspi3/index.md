@@ -234,7 +234,7 @@ You need to change the element `NetworkInterfaceAddress` to the network interfac
 
 1. Find network interface.
 
-   :speech_balloon: You can find a network interface such as `enP4p4s0`.
+   :speech_balloon: You can find a network interface such as `eth0`.
 
    ```console
    [root@localhost ~]# ip a
@@ -343,7 +343,7 @@ You need to change the element `NetworkInterfaceAddress` to the network interfac
 
       ![podman attach ok](./images/podman-attach-ok.png)
 
-   1. Also map file should be copied.
+   1. Also map files should be copied.
 
       ```console
       cp ~/map/lanelet2_map.osm /var/lib/containers/storage/volumes/comhpc-pvc/_data
