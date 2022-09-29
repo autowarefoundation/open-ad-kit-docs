@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://autowarefoundation.github.io/open-ad-kit-docs/latest/version-2.0/start-guide/installation/getting-started/">
       
       <link rel="icon" href="../../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.3">
     
     
       
@@ -1397,13 +1397,7 @@
 <h1 id="getting-started-with-ewaol">Getting started with EWAOL<a class="headerlink" href="#getting-started-with-ewaol" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
 <p><em>Reference: <a href="https://ewaol.sites.arm.com/meta-ewaol/quickstart.html">Project Quickstart — EWAOL documentation</a></em></p>
-<p>This instruction explain how to build yocto image with EWAOL on your host machine.
-If you are using <a href="https://www.ipi.wiki/pages/com-hpc-altra">AVA Developer Platform</a>, you can also download built image from ADLINK's website, and you can skip this steps;</p>
-<ul>
-<li><a href="https://www.ipi.wiki/pages/download-ava-developer-platform">AVA Developer Platform Downloads – I-Pi SMARC</a>
-  <img alt="Downloads" src="../images/getting-started/downloads.png" />
-  :white_check_mark: <code>Yocto with SOAFEE</code> is preferred.</li>
-</ul>
+<p>This instruction explains how to build yocto image with EWAOL on your host machine.</p>
 <h2 id="build-host-setup">Build Host Setup<a class="headerlink" href="#build-host-setup" title="Permanent link">#</a></h2>
 <ol>
 <li>
@@ -1421,39 +1415,53 @@ If you are using <a href="https://www.ipi.wiki/pages/com-hpc-altra">AVA Develope
 <ol>
 <li>
 <p><a href="https://github.com/ADLINK/meta-adlink-ampere">ADLINK / meta-adlink-ampere</a></p>
-<div class="highlight"><pre><span></span><code><span class="go">git clone https://github.com/ADLINK/meta-adlink-ampere.git</span>
+<div class="highlight"><pre><span></span><code><span class="go">git clone https://github.com/ADLINK/meta-adlink-ampere.git -b kirkstone</span>
 </code></pre></div>
 </li>
 <li>
 <p><a href="https://git.gitlab.arm.com/ewaol/meta-ewaol">EWAOL / meta-ewaol</a></p>
 <div class="highlight"><pre><span></span><code><span class="go">cd meta-adlink-ampere</span>
-<span class="go">git clone https://git.gitlab.arm.com/ewaol/meta-ewaol.git</span>
+<span class="go">git clone https://git.gitlab.arm.com/ewaol/meta-ewaol.git -b v1.0</span>
+</code></pre></div>
+</li>
+<li>
+<p>Replace <code>virtualization</code> with <code>baremetal</code> in <code>ava.yml</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span>header:<span class="w"></span>
+<span class="w"> </span>version: 1<span class="w"></span>
+<span class="w"> </span>includes:<span class="w"></span>
+<span class="w"> </span>   - repo: meta-ewaol<span class="w"></span>
+<span class="gd">-     file: meta-ewaol-config/kas/virtualization.yml</span><span class="w"></span>
+<span class="gi">+     file: meta-ewaol-config/kas/baremetal.yml</span><span class="w"></span>
+
+<span class="w"> </span>repos:<span class="w"></span>
+<span class="w"> </span>meta-ewaol:<span class="w"></span>
+<span class="w"> </span>   path: meta-ewaol<span class="w"></span>
+
+<span class="w"> </span>meta-adlink-ampere:<span class="w"></span>
+
+
+
+<span class="w"> </span>machine: ava<span class="w"></span>
+
+<span class="w"> </span>bblayers_conf_header:<span class="w"></span>
+<span class="w"> </span>base: |<span class="w"></span>
+<span class="w"> </span>   POKY_BBLAYERS_CONF_VERSION = &quot;2&quot;<span class="w"></span>
+<span class="w"> </span>   BBPATH = &quot;${TOPDIR}&quot;<span class="w"></span>
+<span class="w"> </span>   BBFILES ?= &quot;&quot;<span class="w"></span>
+
+<span class="w"> </span>target:<span class="w"></span>
+<span class="gd">-  - ewaol-virtualization-image</span><span class="w"></span>
+<span class="gi">+  - ewaol-baremetal-image</span><span class="w"></span>
 </code></pre></div>
 </li>
 <li>
 <p>Build via kas</p>
-<div class="highlight"><pre><span></span><code><span class="go">kas build ComHpc.yml</span>
+<div class="highlight"><pre><span></span><code><span class="go">kas build ava.yml</span>
 </code></pre></div>
 </li>
 </ol>
 <p>:warning: You should be careful of utilizing full CPU power during build.
 <img alt="Build" src="../images/getting-started/build.png" /></p>
-<p><strong>You can choose the way to boot EWAOL, SSD Boot(highly recommended) or USB Boot.</strong></p>
-<ul>
-<li>:white_check_mark: <strong>SSD Boot (highly recommended)</strong><ul>
-<li>You need to use SSD enclosure case to flash yocto image to M.2 SSD directly.</li>
-</ul>
-</li>
-<li>
-<p>USB Boot</p>
-<ul>
-<li>
-<p>You need to use 32GB USB, not 64GB USB to flash yocto image.</p>
-<p>:warning: Do not use 64GB USB because bios gets stuck due to EDK II bug.</p>
-</li>
-</ul>
-</li>
-</ul>
 <!-- prettier-ignore -->
 
 

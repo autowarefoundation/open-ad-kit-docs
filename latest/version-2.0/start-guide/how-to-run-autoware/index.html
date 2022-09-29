@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://autowarefoundation.github.io/open-ad-kit-docs/latest/version-2.0/start-guide/how-to-run-autoware/">
       
       <link rel="icon" href="../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.3">
     
     
       
@@ -1427,35 +1427,33 @@
 <h3 id="run-autowareauto-on-ava-platform-or-pcu">Run Autoware.Auto on AVA platform or PCU<a class="headerlink" href="#run-autowareauto-on-ava-platform-or-pcu" title="Permanent link">#</a></h3>
 <ol>
 <li>
-<p>Open terminal window for each module on you host.</p>
+<p>Access AVA platform or PCU via SSH.</p>
 </li>
 <li>
-<p>Access AVA platform or PCU via SSH in each terminal window.</p>
-</li>
-<li>
-<p>Find docker image id.</p>
-</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="go">docker image ls</span>
-<span class="go">REPOSITORY                                    TAG                                                           IMAGE ID       CREATED       SIZE</span>
-<span class="go">public.ecr.aws/k7o9k6q7/tier4/autoware.auto   open_ad_kit-autoware-auto-20211111234534-88ea1196cdc0-2zv2o   48a4503b4fe4   11 days ago   6.65GB</span>
+<p>Deploy kubernetes clusters for Autoware.</p>
+<div class="highlight"><pre><span></span><code><span class="go">kubectl apply -f comhpc-deployments</span>
 </code></pre></div>
-<p>You can find id such as <code>48a4503b4fe4</code>.</p>
-<ol>
-<li>
-<p>Launch modules.</p>
-<p>Replace <code>48a4503b4fe4</code> with your docker image id.</p>
-<p><strong>Terminal 1 (map)</strong></p>
-<div class="highlight"><pre><span></span><code><span class="go">docker run --rm -it --net host -v ~/map:/map -v ~/cyclonedds:/etc/cyclonedds 48a4503b4fe4 /bin/bash -c &quot;export CYCLONEDDS_URI=file:///etc/cyclonedds/cyclonedds.xml; export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp; source install/setup.bash; ros2 launch scenario_simulator_launch autoware_auto_mapping.launch.py map_path:=/map/kashiwanoha&quot;</span>
+<p>:speech_balloon: You can make sure deployments are deployed.</p>
+<div class="highlight"><pre><span></span><code><span class="gp">root@comhpc:~# </span>kubectl get deploy -o wide
+<span class="go">NAME               READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                                                                         SELECTOR</span>
+<span class="go">comhpc-control     1/1     1            1           15h   comhpc       ghcr.io/autowarefoundation/autoware-universe:galactic-20220728-prebuilt-cuda   io.kompose.service=comhpc</span>
+<span class="go">comhpc-api         1/1     1            1           15h   comhpc       ghcr.io/autowarefoundation/autoware-universe:galactic-20220728-prebuilt-cuda   io.kompose.service=comhpc</span>
+<span class="go">comhpc-planning    1/1     1            1           15h   comhpc       ghcr.io/autowarefoundation/autoware-universe:galactic-20220728-prebuilt-cuda   io.kompose.service=comhpc</span>
+<span class="go">comhpc-simulator   1/1     1            1           15h   comhpc       ghcr.io/autowarefoundation/autoware-universe:galactic-20220728-prebuilt-cuda   io.kompose.service=comhpc</span>
+<span class="go">comhpc-map         1/1     1            1           15h   comhpc       ghcr.io/autowarefoundation/autoware-universe:galactic-20220728-prebuilt-cuda   io.kompose.service=comhpc</span>
+<span class="go">comhpc-system      1/1     1            1           17h   comhpc       ghcr.io/autowarefoundation/autoware-universe:galactic-20220728-prebuilt-cuda   io.kompose.service=comhpc</span>
+<span class="go">comhpc-vehicle     1/1     1            1           17h   comhpc       ghcr.io/autowarefoundation/autoware-universe:galactic-20220728-prebuilt-cuda   io.kompose.service=comhpc</span>
 </code></pre></div>
-<p><strong>Terminal 2 (perception)</strong></p>
-<div class="highlight"><pre><span></span><code><span class="go">docker run --rm -it --net host -v ~/cyclonedds:/etc/cyclonedds 48a4503b4fe4 /bin/bash -c &quot;export CYCLONEDDS_URI=file:///etc/cyclonedds/cyclonedds.xml; export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp; source install/setup.bash; ros2 launch scenario_simulator_launch autoware_auto_perception.launch.py&quot;</span>
-</code></pre></div>
-<p><strong>Terminal 3 (planning)</strong></p>
-<div class="highlight"><pre><span></span><code><span class="go">docker run --rm -it --net host -v ~/cyclonedds:/etc/cyclonedds 48a4503b4fe4 /bin/bash -c &quot;export CYCLONEDDS_URI=file:///etc/cyclonedds/cyclonedds.xml; export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp; source install/setup.bash; ros2 launch scenario_simulator_launch autoware_auto_planning.launch.py&quot;</span>
-</code></pre></div>
-<p><strong>Terminal 4 (vehicle)</strong></p>
-<div class="highlight"><pre><span></span><code><span class="go">docker run --rm -it --net host -v ~/cyclonedds:/etc/cyclonedds 48a4503b4fe4 /bin/bash -c &quot;export CYCLONEDDS_URI=file:///etc/cyclonedds/cyclonedds.xml; export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp; source install/setup.bash; ros2 launch autoware_auto_launch autoware_auto_vehicle.launch.py&quot;</span>
+<p>:speech_balloon: Please make sure all pods are running.</p>
+<div class="highlight"><pre><span></span><code><span class="gp">root@comhpc:~# </span>kubectl get pod -o wide
+<span class="go">NAME                                READY   STATUS    RESTARTS   AGE    IP              NODE   NOMINATED NODE   READINESS GATES</span>
+<span class="go">comhpc-control-58cb5b9dbd-fqckv     1/1     Running   0          104m   192.168.10.27   ava    &lt;none&gt;           &lt;none&gt;</span>
+<span class="go">comhpc-api-7b588f7988-n4rb7         1/1     Running   0          103m   192.168.10.27   ava    &lt;none&gt;           &lt;none&gt;</span>
+<span class="go">comhpc-planning-d964b9646-92rzc     1/1     Running   0          104m   192.168.10.27   ava    &lt;none&gt;           &lt;none&gt;</span>
+<span class="go">comhpc-simulator-7f5b9fb97d-7kvqm   1/1     Running   0          104m   192.168.10.27   ava    &lt;none&gt;           &lt;none&gt;</span>
+<span class="go">comhpc-map-7867476c98-mgrm5         1/1     Running   0          103m   192.168.10.27   ava    &lt;none&gt;           &lt;none&gt;</span>
+<span class="go">comhpc-system-c5599d5b-xxhg2        1/1     Running   0          103m   192.168.10.27   ava    &lt;none&gt;           &lt;none&gt;</span>
+<span class="go">comhpc-vehicle-9d6b5b9b8-k95q9      1/1     Running   0          103m   192.168.10.27   ava    &lt;none&gt;           &lt;none&gt;</span>
 </code></pre></div>
 </li>
 </ol>

@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://autowarefoundation.github.io/open-ad-kit-docs/latest/version-2.0/start-guide/installation/">
       
       <link rel="icon" href="../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.3">
     
     
       
@@ -1462,6 +1462,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#7-advanced-setup" class="md-nav__link">
+    7. Advanced setup
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Advanced setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ava-platform_3" class="md-nav__link">
+    AVA Platform
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1484,6 +1504,9 @@
 
 <h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h1>
 <p>This page explains how to set up the development environment that are described in the System Configuration chapter.</p>
+<div class="admonition warning">
+<p class="admonition-title">The following contents are diverted from <a href="https://github.com/autowarefoundation/autoware_reference_design/blob/main/docs/Appendix/Open-AD-Kit-Start-Guide/index.md">Open AD Kit version 1.0</a>. These contents will be updated for Open AD Kit version 2.0.</p>
+</div>
 <h2 id="minimum-requirements">Minimum requirements<a class="headerlink" href="#minimum-requirements" title="Permanent link">#</a></h2>
 <ul>
 <li>Developer Platform:<ul>
@@ -1492,13 +1515,13 @@
 </li>
 <li>In-Vehicle Development Platform <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>: TODO</li>
 <li>Software Tool:<ul>
-<li>Scenario simulator version x.x <sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
-<li>Rviz version x.x <sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+<li>Scenario simulator version 0.6.5+ <sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+<li>Rviz version 8.5.1 <sup id="fnref3:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 </li>
 <li>Container Image:<ul>
-<li><a href="https://github.com/autowarefoundation/autoware/pkgs/container/autoware-universe/26844652?tag=galactic-latest-prebuilt-cuda-arm64">Autoware.Auto for arm64</a></li>
-<li><a href="https://github.com/autowarefoundation/autoware/pkgs/container/autoware-universe/26944750?tag=galactic-latest-prebuilt-cuda">Scenario simulator for x86_64</a> <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
+<li><a href="https://github.com/autowarefoundation/autoware/pkgs/container/autoware-universe/30821188?tag=galactic-20220728-prebuilt-cuda">Autoware.Universe for arm64</a></li>
+<li><a href="https://github.com/tier4/scenario_simulator_v2/pkgs/container/scenario_simulator_v2">Scenario simulator for x86_64</a> <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></li>
 </ul>
 </li>
 </ul>
@@ -1509,7 +1532,7 @@
 <h3 id="ava-platform">AVA Platform<a class="headerlink" href="#ava-platform" title="Permanent link">#</a></h3>
 <ol>
 <li><a href="getting-started/">Getting started with EWAOL</a></li>
-<li><a href="boot-ewaol/">Boot EWAOL via SSD Boot</a></li>
+<li><a href="boot-ewaol/">Boot EWAOL</a></li>
 <li><a href="extend-rootfs/">Extend rootfs partition</a></li>
 </ol>
 <h3 id="pcu-platform">PCU Platform<a class="headerlink" href="#pcu-platform" title="Permanent link">#</a></h3>
@@ -1549,6 +1572,12 @@
 </ol>
 <h2 id="6-run-autoware-on-the-development-platform">6. Run Autoware on the development platform<a class="headerlink" href="#6-run-autoware-on-the-development-platform" title="Permanent link">#</a></h2>
 <p>Please refer to the <a href="../how-to-run-autoware/">How to run Autoware</a> section.</p>
+<h2 id="7-advanced-setup">7. Advanced setup<a class="headerlink" href="#7-advanced-setup" title="Permanent link">#</a></h2>
+<p>The instructions how to install advanced software such as desktop environment and NVIDIA driver.</p>
+<h3 id="ava-platform_3">AVA Platform<a class="headerlink" href="#ava-platform_3" title="Permanent link">#</a></h3>
+<ol>
+<li><a href="advanced-setup-setup-ava/">Advanced setup for AVA Platform</a></li>
+</ol>
 <!-- prettier-ignore -->
 <div class="footnote">
 <hr />
