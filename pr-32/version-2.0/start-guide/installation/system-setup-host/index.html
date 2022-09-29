@@ -1361,15 +1361,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#copy-scenario-simulator-image-to-your-host-machine" class="md-nav__link">
-    Copy scenario simulator image to your host machine
+  <a href="#download-scenario-simulator-image-to-your-host-machine" class="md-nav__link">
+    Download scenario simulator image to your host machine
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#copy-necessary-files-to-your-host-machine" class="md-nav__link">
-    Copy necessary files to your host machine
+  <a href="#install-nvidia-docker2-rocker" class="md-nav__link">
+    Install nvidia-docker2 &amp; Rocker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-map-and-scenario-files" class="md-nav__link">
+    Download map and scenario files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-kernel-configuration-file-for-tuning-kernel-parameters" class="md-nav__link">
+    Download kernel configuration file for tuning kernel parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-configuration-file-of-cyclone-dds" class="md-nav__link">
+    Download configuration file of Cyclone DDS
   </a>
   
 </li>
@@ -1377,20 +1398,6 @@
         <li class="md-nav__item">
   <a href="#modify-cycloneddsxml" class="md-nav__link">
     Modify cyclonedds.xml
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#setup-ade" class="md-nav__link">
-    Setup ADE
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#checkout-autowareauto" class="md-nav__link">
-    Checkout Autoware.Auto
   </a>
   
 </li>
@@ -1418,44 +1425,77 @@
 <h1 id="system-setup-on-your-host">System Setup on your host<a class="headerlink" href="#system-setup-on-your-host" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
 <p>This instruction explains how to perform system setup for test execution on your host.</p>
-<p>You need to copy docker images and necessary files, and checkout Autoware.Auto.</p>
-<h2 id="copy-scenario-simulator-image-to-your-host-machine">Copy scenario simulator image to your host machine<a class="headerlink" href="#copy-scenario-simulator-image-to-your-host-machine" title="Permanent link">#</a></h2>
-<p>The docker image of scenario simulator is registered in <a href="https://hub.docker.com/r/tier4/scenario_simulator_v2/tags">docker hub</a>.
-<img alt="docker hub" src="../images/system-setup-host/docker-hub.png" /></p>
+<p>You need to copy docker images and necessary files.</p>
+<h2 id="download-scenario-simulator-image-to-your-host-machine">Download scenario simulator image to your host machine<a class="headerlink" href="#download-scenario-simulator-image-to-your-host-machine" title="Permanent link">#</a></h2>
+<p>The docker image of scenario simulator is registered in <a href="https://github.com/tier4/scenario_simulator_v2/pkgs/container/scenario_simulator_v2">GitHub Container Registry</a></p>
 <ol>
 <li>
 <p>Copy docker image to your host machine.</p>
-<div class="highlight"><pre><span></span><code><span class="go">docker pull tier4/scenario_simulator_v2:open_ad_kit-amd64-foxy</span>
+<div class="highlight"><pre><span></span><code><span class="go">docker pull ghcr.io/tier4/scenario_simulator_v2:galactic</span>
 </code></pre></div>
 </li>
 </ol>
-<h2 id="copy-necessary-files-to-your-host-machine">Copy necessary files to your host machine<a class="headerlink" href="#copy-necessary-files-to-your-host-machine" title="Permanent link">#</a></h2>
+<h2 id="install-nvidia-docker2-rocker">Install nvidia-docker2 &amp; Rocker<a class="headerlink" href="#install-nvidia-docker2-rocker" title="Permanent link">#</a></h2>
+<p>In this test, we try to run rviz inside docker, so please install nvidia-docker2 &amp; Rocker.</p>
+<p><img alt="💬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4ac.svg" title=":speech_balloon:" /> This is quoted from <a href="https://tier4.github.io/scenario_simulator_v2-docs/user_guide/RunWithDocker/">Scenario testing framework for Autoware: Run on Docker</a></p>
 <ol>
 <li>
-<p>Copy <strong>scenario</strong> files for scenario simulator.</p>
-<p>Files are placed in the directory <img alt="📁" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c1.svg" title=":file_folder:" /><a href="scenario">docs/Appendix/Open-AD-Kit-Start-Guide/scenario</a></p>
-<p><strong>[Currently placed]</strong></p>
-<ul>
-<li><img alt="📄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c4.svg" title=":page_facing_up:" /><a href="scenario/scenario_e3b743e7-110c-4db6-b136-e5ffd5538315_2.yml">UC-001-0001-Kashiwa:2</a></li>
-<li><img alt="📄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c4.svg" title=":page_facing_up:" /><a href="scenario/scenario_a7effa60-c07d-4df4-b082-bc0d6cbae825_1.yml">UC-001-0018-Kashiwa:1</a></li>
-</ul>
-<p>Copy the scenario files to your <code>home</code> directory as the following directory structure.</p>
-<p><img alt="Home Scenario" src="../images/system-setup-host/home_scenario.png" /></p>
+<p>If you have NVIDIA <abbr title="Graphics Processing Unit">GPU</abbr>(s) in your machine, you have to install nvidia-driver and nvidia-docker2.</p>
+<div class="highlight"><pre><span></span><code><span class="go">curl -s -L https://nvidia.github.io/nvidia-container-runtime/gpgkey | sudo apt-key add -</span>
+<span class="go">curl -s -L https://nvidia.github.io/nvidia-container-runtime/ubuntu20.04/nvidia-container-runtime.list | \</span>
+<span class="go">  sudo tee /etc/apt/sources.list.d/nvidia-container-runtime.list</span>
+<span class="go">sudo apt-get update</span>
+<span class="go">sudo apt install -y nvidia-docker2</span>
+<span class="go">sudo systemctl restart docker.service</span>
+</code></pre></div>
 </li>
 <li>
-<p>Copy configuration file of <strong>Cyclone DDS</strong>.</p>
-<p>You also need to copy <code>cyclonedds.xml</code> to your <code>home</code> directory.</p>
-<p><img alt="Home Cyclone DDS" src="../images/system-setup-host/home_cyclonedds.png" /></p>
+<p>Install Rocker</p>
+<div class="highlight"><pre><span></span><code><span class="go">sudo pip3 install git+https://github.com/osrf/rocker.git</span>
+</code></pre></div>
+</li>
+</ol>
+<h2 id="download-map-and-scenario-files">Download map and scenario files<a class="headerlink" href="#download-map-and-scenario-files" title="Permanent link">#</a></h2>
+<ol>
+<li>
+<p>Download from Google Drive.</p>
+<div class="highlight"><pre><span></span><code><span class="go">wget &quot;https://drive.google.com/uc?export=download&amp;id=1vWMLbmwJJE5tYO40ypCMxqtmgQPQxhiw&amp;confirm=t&amp;uuid=3d84d854-3dd2-4950-8cc8-248feeab547d&quot; -O sample_data.zip</span>
+</code></pre></div>
 </li>
 <li>
-<p>Copy <strong>kernel configuration</strong> file to <code>/etc/sysctl.d</code>.</p>
-<p>You also need to copy <code>60_cyclonedds.conf</code> to <code>/etc/sysctl.d</code> directory in your host as well.</p>
-<div class="highlight"><pre><span></span><code><span class="go">cp 60_cyclonedds.conf /etc/sysctl.d</span>
+<p>Unzip it.</p>
+<div class="highlight"><pre><span></span><code><span class="go">unzip sample_data.zip</span>
+</code></pre></div>
+</li>
+<li>
+<p>Open the scenario file named <code>t4v2.yaml</code> in <code>sample_data</code>.</p>
+<p><img alt="t4v2.yaml" src="../images/system-setup-host/t4v2.yaml.png" /></p>
+</li>
+<li>
+<p>Change the path to <code>lanelet2_map.osm</code> and <code>pointcloud_map.pcd</code>.</p>
+<p><img alt="Edit t4v2.yaml" src="../images/system-setup-host/edit.t4v2.yaml.png" /></p>
+</li>
+</ol>
+<h2 id="download-kernel-configuration-file-for-tuning-kernel-parameters">Download <strong>kernel configuration</strong> file for tuning kernel parameters<a class="headerlink" href="#download-kernel-configuration-file-for-tuning-kernel-parameters" title="Permanent link">#</a></h2>
+<p>We have to reconfigure kernel parameters by using <code>sysctl</code> for system stability.</p>
+<ol>
+<li>
+<p>Download.</p>
+<div class="highlight"><pre><span></span><code><span class="go">wget -P /etc/sysctl.d https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/main/docs/version-2.0/start-guide/installation/sysctl.d/60_cyclonedds.conf</span>
 </code></pre></div>
 </li>
 <li>
 <p>Update kernel parameters.</p>
 <div class="highlight"><pre><span></span><code><span class="go">sysctl -p /etc/sysctl.d/60_cyclonedds.conf</span>
+</code></pre></div>
+</li>
+</ol>
+<h2 id="download-configuration-file-of-cyclone-dds">Download configuration file of Cyclone DDS<a class="headerlink" href="#download-configuration-file-of-cyclone-dds" title="Permanent link">#</a></h2>
+<p>In this test, we are using Cyclone DDS, so you also need to download configuration file of Cyclone DDS.</p>
+<ol>
+<li>
+<p>Download <code>cyclonedds.xml</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="go">wget -P ~/cyclonedds https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/main/docs/version-2.0/start-guide/installation/cyclonedds/cyclonedds.xml</span>
 </code></pre></div>
 </li>
 </ol>
@@ -1499,35 +1539,6 @@
 <span class="gd">-  &lt;NetworkInterfaceAddress&gt;lo&lt;/NetworkInterfaceAddress&gt;</span><span class="w"></span>
 <span class="gi">+  &lt;NetworkInterfaceAddress&gt;enp0s31f6&lt;/NetworkInterfaceAddress&gt;</span><span class="w"></span>
 <span class="w"> </span>&lt;/General&gt;<span class="w"></span>
-</code></pre></div>
-</li>
-</ol>
-<h2 id="setup-ade">Setup ADE<a class="headerlink" href="#setup-ade" title="Permanent link">#</a></h2>
-<p><strong>In general, Autoware.Auto runs by using the Agile Development Environment (ADE), so we need to install ADE.</strong></p>
-<p>In this test, we use launch file placed in Autoware.Auto to run visualization quickly and easily.</p>
-<ol>
-<li>
-<p>Install ADE on AVA platform by following the instructions; <a href="https://ade-cli.readthedocs.io/en/latest/install.html">Installation — ADE 4.4.0dev documentation</a></p>
-<p>Download and setup ADE.</p>
-<div class="highlight"><pre><span></span><code><span class="go">wget https://gitlab.com/ApexAI/ade-cli/-/jobs/1341322852/artifacts/raw/dist/ade+aarch64 -O ade</span>
-<span class="go">chmod +x ade</span>
-<span class="go">mv ade /usr/bin/</span>
-</code></pre></div>
-</li>
-<li>
-<p>Setup ADE home directory by following the instructions; <a href="https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/installation-ade.html">Installation with ADE</a></p>
-<div class="highlight"><pre><span></span><code><span class="go">mkdir -p ~/adehome</span>
-<span class="go">cd ~/adehome</span>
-<span class="go">touch .adehome</span>
-</code></pre></div>
-</li>
-</ol>
-<h2 id="checkout-autowareauto">Checkout Autoware.Auto<a class="headerlink" href="#checkout-autowareauto" title="Permanent link">#</a></h2>
-<ol>
-<li>
-<p>Get Autoware.Auto on your host.</p>
-<div class="highlight"><pre><span></span><code><span class="go">cd ~/adehome</span>
-<span class="go">git clone https://gitlab.com/autowarefoundation/autoware.auto/AutowareAuto.git</span>
 </code></pre></div>
 </li>
 </ol>

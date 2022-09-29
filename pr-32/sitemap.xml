@@ -506,7 +506,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-32/version-2.0/start-guide/how-to-run-simulators/troubleshooting/troubleshooting/</loc>
+         <lastmod>2022-09-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-32/version-2.0/start-guide/installation/</loc>
+         <lastmod>2022-09-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-32/version-2.0/start-guide/installation/advanced-setup-setup-ava/</loc>
          <lastmod>2022-09-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -542,11 +552,6 @@
     </url>
     <url>
          <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-32/version-2.0/start-guide/installation/system-setup-pcu/</loc>
-         <lastmod>2022-09-29</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/pr-32/version-2.0/start-guide/installation/images/boot-ewaol/</loc>
          <lastmod>2022-09-29</lastmod>
          <changefreq>daily</changefreq>
     </url>

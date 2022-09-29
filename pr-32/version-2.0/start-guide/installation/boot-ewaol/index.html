@@ -15,7 +15,7 @@
     
     
       
-        <title>Boot EWAOL via SSD Boot - Open AD Kit Documentation</title>
+        <title>Boot EWAOL - Open AD Kit Documentation</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#boot-ewaol-via-ssd-boot" class="md-skip">
+        <a href="#boot-ewaol" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Boot EWAOL via SSD Boot
+              Boot EWAOL
             
           </span>
         </div>
@@ -1361,13 +1361,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#get-yocto-image" class="md-nav__link">
-    Get yocto image
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#flash-yocto-image" class="md-nav__link">
     Flash yocto image
   </a>
@@ -1408,16 +1401,9 @@
   </a>
 
 
-<h1 id="boot-ewaol-via-ssd-boot">Boot EWAOL via SSD Boot<a class="headerlink" href="#boot-ewaol-via-ssd-boot" title="Permanent link">#</a></h1>
+<h1 id="boot-ewaol">Boot EWAOL<a class="headerlink" href="#boot-ewaol" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
 <p>You need to use SSD enclosure case to flash yocto image to M.2 SSD directly.</p>
-<h2 id="get-yocto-image">Get yocto image<a class="headerlink" href="#get-yocto-image" title="Permanent link">#</a></h2>
-<ol>
-<li>Build yocto image with EWAOL by following the instructions <a href="../getting-started/">Getting started with EWAOL</a>, or Download the image from the website to your host machine;<ul>
-<li><a href="https://www.ipi.wiki/pages/download-ava-developer-platform">AVA Developer Platform Downloads – I-Pi SMARC</a> (<img alt="✅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2705.svg" title=":white_check_mark:" /> <code>Yocto with SOAFEE</code> is preferred.)</li>
-</ul>
-</li>
-</ol>
 <h2 id="flash-yocto-image">Flash yocto image<a class="headerlink" href="#flash-yocto-image" title="Permanent link">#</a></h2>
 <p>Remove M.2 SSD from AVA platform and flash yocto image to it directly.</p>
 <ol>
@@ -1432,19 +1418,19 @@
 </li>
 <li>
 <p>Then, show available block devices.</p>
-<div class="highlight"><pre><span></span><code><span class="go">lsblk</span>
+<div class="highlight"><pre><span></span><code><span class="go">lsblk -p</span>
 <span class="go">NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT</span>
 <span class="go">...</span>
-<span class="go">sdn           8:208  0 119.2G  0 disk</span>
-<span class="go">├─sdn1        8:209  0   512M  0 part</span>
-<span class="go">├─sdn2        8:210  0     1G  0 part /media/foo/7d00c690-db24-462d-8c8d-dce7bdf151d8</span>
-<span class="go">└─sdn3        8:211  0 117.8G  0 part</span>
+<span class="go">/dev/sdb       8:0   0 119.2G  0 disk</span>
+<span class="go">├─sdb1         8:1   0   512M  0 part</span>
+<span class="go">├─sdb2         8:2   0     1G  0 part /media/foo/7d00c690-db24-462d-8c8d-dce7bdf151d8</span>
+<span class="go">└─sdb3         8:3   0 117.8G  0 part</span>
 </code></pre></div>
 </li>
 <li>
 <p>Flush yocto image to M.2 SSD.</p>
 <p><img alt="💬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4ac.svg" title=":speech_balloon:" /> For example</p>
-<div class="highlight"><pre><span></span><code><span class="go">sudo dd if=ewaol-image-docker-comhpc-20211022083723.rootfs.wic of=/dev/sdn bs=1M status=progress &amp;&amp; sync</span>
+<div class="highlight"><pre><span></span><code><span class="go">sudo bmaptool copy --bmap build/tmp_baremetal/deploy/images/ava/ewaol-baremetal-image-ava.wic.bmap build/tmp_baremetal/deploy/images/ava/ewaol-baremetal-image-ava.wic.gz  /dev/sdb</span>
 </code></pre></div>
 </li>
 </ol>
@@ -1457,8 +1443,8 @@
 </li>
 <li>
 <p>The following screen comes up, then login as <code>root</code> without password.</p>
-<div class="highlight"><pre><span></span><code><span class="go">EWAOL (Edge Workload Abstraction and Orchestration Layer) 0.1 comhpc tty1</span>
-<span class="go">comhpc login:</span>
+<div class="highlight"><pre><span></span><code><span class="go">EWAOL (Edge Workload Abstraction and Orchestration Layer) v1.0 ava -</span>
+<span class="go">ava login:</span>
 </code></pre></div>
 <p><img alt="💬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4ac.svg" title=":speech_balloon:" /> You are able to access via SSH.</p>
 </li>
@@ -1489,7 +1475,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installation" rel="prev">
+        <a href="../advanced-setup-setup-ava/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Advanced setup for AVA Platform" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1498,7 +1484,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Installation
+              Advanced setup for AVA Platform
             </div>
           </div>
         </a>
