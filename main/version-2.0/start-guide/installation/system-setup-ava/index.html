@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://autowarefoundation.github.io/open-ad-kit-docs/main/version-2.0/start-guide/installation/system-setup-ava/">
       
       <link rel="icon" href="../../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.5.3">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.3">
     
     
       
@@ -1368,22 +1368,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#copy-autowareauto-image-to-ava-platform" class="md-nav__link">
-    Copy Autoware.Auto image to AVA platform
+  <a href="#download-kubernetes-yaml-files" class="md-nav__link">
+    Download kubernetes yaml files
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#copy-necessary-files-to-usb-drive" class="md-nav__link">
-    Copy necessary files to USB drive
+  <a href="#download-map-files" class="md-nav__link">
+    Download map files
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#copy-files-from-usb-drive-to-ava-platform" class="md-nav__link">
-    Copy files from USB drive to AVA platform
+  <a href="#download-kernel-configuration-file-for-tuning-kernel-parameters" class="md-nav__link">
+    Download kernel configuration file for tuning kernel parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-configuration-file-of-cyclone-dds" class="md-nav__link">
+    Download configuration file of Cyclone DDS
   </a>
   
 </li>
@@ -1418,85 +1425,70 @@
 <h1 id="system-setup-on-ava-platform">System Setup on AVA platform<a class="headerlink" href="#system-setup-on-ava-platform" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
 <p>This instruction explains how to perform system setup for test execution on AVA platform.</p>
-<p>You need to copy docker images and necessary files.</p>
 <h2 id="access-to-ava-platform-via-ssh">Access to AVA platform via SSH<a class="headerlink" href="#access-to-ava-platform-via-ssh" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code><span class="go">ssh root@IP-ADDRESS</span>
 </code></pre></div>
-<p>For example;</p>
-<div class="highlight"><pre><span></span><code><span class="go">ssh root@192.168.10.27</span>
+<p>:speech_balloon: For example;</p>
+<div class="highlight"><pre><span></span><code><span class="go">ssh root@192.168.0.62</span>
 </code></pre></div>
-<h2 id="copy-autowareauto-image-to-ava-platform">Copy Autoware.Auto image to AVA platform<a class="headerlink" href="#copy-autowareauto-image-to-ava-platform" title="Permanent link">#</a></h2>
-<p>The docker image of Autoware.Auto is registered in <a href="https://gitlab.com/autowarefoundation/autoware.auto/AutowareAuto/container_registry/2511358">GitLab Container Registry</a>.
-<img alt="GitLab Container Registry" src="../images/system-setup-ava/gitlab-cr.png" /></p>
+<h2 id="download-kubernetes-yaml-files">Download kubernetes yaml files<a class="headerlink" href="#download-kubernetes-yaml-files" title="Permanent link">#</a></h2>
+<p>Autoware.Universe runs as k3s clusters in Open AD Kit, so please download kubernetes yaml files to deploy Autoware to AVA platform.</p>
 <ol>
 <li>
-<p>Copy docker image to AVA platform.</p>
-<div class="highlight"><pre><span></span><code><span class="go">docker pull registry.gitlab.com/autowarefoundation/autoware.auto/autowareauto/arm64/openadkit-foxy:latest</span>
+<p>Download.</p>
+<div class="highlight"><pre><span></span><code><span class="go">wget https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/main/docs/version-2.0/start-guide/installation/deployments/comhpc-deployments.zip</span>
+</code></pre></div>
+</li>
+<li>
+<p>Unzip it.</p>
+<div class="highlight"><pre><span></span><code><span class="go">unzip comhpc-deployments.zip -d comhpc-deployments</span>
+</code></pre></div>
+<p>:speech_balloon: You will see the following files are unzipped.</p>
+<div class="highlight"><pre><span></span><code><span class="go">Archive:  comhpc-deployments.zip</span>
+<span class="go">  inflating: comhpc-api-deployment.yaml</span>
+<span class="go">  inflating: comhpc-control-deployment.yaml</span>
+<span class="go">  inflating: comhpc-map-deployment.yaml</span>
+<span class="go">  inflating: comhpc-persistent-volume.yaml</span>
+<span class="go">  inflating: comhpc-persistent-volume-claim.yaml</span>
+<span class="go">  inflating: comhpc-planning-deployment.yaml</span>
+<span class="go">  inflating: comhpc-simulator-deployment.yaml</span>
+<span class="go">  inflating: comhpc-system-deployment.yaml</span>
+<span class="go">  inflating: comhpc-vehicle-deployment.yaml</span>
 </code></pre></div>
 </li>
 </ol>
-<h2 id="copy-necessary-files-to-usb-drive">Copy necessary files to USB drive<a class="headerlink" href="#copy-necessary-files-to-usb-drive" title="Permanent link">#</a></h2>
+<h2 id="download-map-files">Download map files<a class="headerlink" href="#download-map-files" title="Permanent link">#</a></h2>
 <ol>
 <li>
-<p>Copy files related to <strong>map contents</strong>.</p>
-<p>Files are placed in the directory :file_folder:<a href="map">docs/Appendix/Open-AD-Kit-Start-Guide/map</a></p>
-<ul>
-<li>:page_facing_up:<a href="map/kashiwanoha/lanelet2_map.osm">lanelet2_map.osm</a></li>
-<li>:page_facing_up:<a href="map/kashiwanoha/pointcloud_map.pcd">pointcloud_map.pcd</a></li>
-<li>:page_facing_up:<a href="map/kashiwanoha/global_map_center.pcd.yaml">global_map_center.pcd.yaml</a></li>
-<li>:page_facing_up:<a href="map/kashiwanoha/lanelet2_map_provider.osm.yaml">lanelet2_map_provider.osm.yaml</a></li>
-<li>:page_facing_up:<a href="map/kashiwanoha/map_publisher.param.yaml">map_publisher.param.yaml</a></li>
-</ul>
-<p>Copy files to your USB drive as the following directory structure.</p>
-<p><img alt="USB Map" src="../images/system-setup-ava/usb_map.png" /></p>
+<p>Download from Google Drive.</p>
+<div class="highlight"><pre><span></span><code><span class="go">wget &quot;https://drive.google.com/uc?export=download&amp;id=1vWMLbmwJJE5tYO40ypCMxqtmgQPQxhiw&amp;confirm=t&amp;uuid=3d84d854-3dd2-4950-8cc8-248feeab547d&quot; -O sample_data.zip</span>
+</code></pre></div>
 </li>
 <li>
-<p>Copy configuration file of <strong>Cyclone DDS</strong>.</p>
-<p>In this test, we are using Cyclone DDS, so you also need to copy configuration file of Cyclone DDS.</p>
-<p>File is placed in the directory :file_folder:<a href="cyclonedds">docs/Appendix/Open-AD-Kit-Start-Guide/cyclonedds</a></p>
-<ul>
-<li>:page_facing_up:<a href="cyclonedds/cyclonedds.xml">cyclonedds.xml</a></li>
-</ul>
-<p>Copy the file to your USB drive as the following directory structure.</p>
-<p><img alt="USB Cyclone DDS" src="../images/system-setup-ava/usb_cyclonedds.png" /></p>
+<p>Unzip it.</p>
+<div class="highlight"><pre><span></span><code><span class="go">unzip sample_data.zip</span>
+</code></pre></div>
 </li>
 <li>
-<p>Copy <strong>kernel configuration</strong> file for tuning kernel parameters.</p>
+<p>Move <code>map</code> directory from <code>sample_data</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="go">mv sample_data/map/ ~/</span>
+</code></pre></div>
+<p>:speech_balloon: You will see the following files are located.</p>
+<div class="highlight"><pre><span></span><code><span class="gp">root@ava:~# </span>ls -la ~/map
+<span class="go">total 61288</span>
+<span class="go">drwxrwxr-x 2 root root     4096 Aug 18 06:23 .</span>
+<span class="go">drwx------ 6 root root     4096 Aug 18 06:23 ..</span>
+<span class="go">-rw-r--r-- 1 root root  1841436 Aug 18 06:23 lanelet2_map.osm</span>
+<span class="go">-rw-r--r-- 1 root root 60904720 Aug 18 06:23 pointcloud_map.pcd</span>
+</code></pre></div>
+</li>
+</ol>
+<h2 id="download-kernel-configuration-file-for-tuning-kernel-parameters">Download <strong>kernel configuration</strong> file for tuning kernel parameters<a class="headerlink" href="#download-kernel-configuration-file-for-tuning-kernel-parameters" title="Permanent link">#</a></h2>
 <p>We have to reconfigure kernel parameters by using <code>sysctl</code> for system stability.</p>
-<p>File is placed in the directory :file_folder:<a href="sysctl.d">docs/Appendix/Open-AD-Kit-Start-Guide/sysctl.d</a></p>
-<ul>
-<li>:page_facing_up:<a href="sysctl.d/60_cyclonedds.conf">60_cyclonedds.conf</a></li>
-</ul>
-<p>Copy the file to your USB root.</p>
-</li>
-</ol>
-<h2 id="copy-files-from-usb-drive-to-ava-platform">Copy files from USB drive to AVA platform<a class="headerlink" href="#copy-files-from-usb-drive-to-ava-platform" title="Permanent link">#</a></h2>
 <ol>
 <li>
-<p>Plug your USB drive into AVA platform and copy files</p>
-<ol>
-<li>
-<p>Find USB device name.</p>
-<div class="highlight"><pre><span></span><code><span class="go">lsblk</span>
-<span class="go">NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT</span>
-<span class="go">sda           8:16   1  28.9G  0 disk</span>
-<span class="go">`-sda1        8:17   1  28.9G  0 part</span>
-<span class="go">nvme0n1     259:0    0 119.2G  0 disk</span>
-<span class="go">|-nvme0n1p1 259:1    0   256M  0 part</span>
-<span class="go">|-nvme0n1p2 259:2    0   118G  0 part /</span>
-<span class="go">`-nvme0n1p3 259:3    0     1G  0 part</span>
-</code></pre></div>
-</li>
-<li>
-<p>Mount USB driver and copy directory.</p>
-<div class="highlight"><pre><span></span><code><span class="go">mkdir -p /mnt/usb</span>
-<span class="go">mount /dev/sda1 /mnt/usb</span>
-<span class="go">cp -r /mnt/usb/* ~/</span>
-</code></pre></div>
-</li>
-<li>
-<p>Move kernel configuration file to <code>/etc/sysctl.d</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="go">mv ~/60_cyclonedds.conf /etc/sysctl.d</span>
+<p>Download.</p>
+<div class="highlight"><pre><span></span><code><span class="go">wget -P /etc/sysctl.d https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/main/docs/version-2.0/start-guide/installation/sysctl.d/60_cyclonedds.conf</span>
 </code></pre></div>
 </li>
 <li>
@@ -1505,6 +1497,13 @@
 </code></pre></div>
 </li>
 </ol>
+<h2 id="download-configuration-file-of-cyclone-dds">Download configuration file of Cyclone DDS<a class="headerlink" href="#download-configuration-file-of-cyclone-dds" title="Permanent link">#</a></h2>
+<p>In this test, we are using Cyclone DDS, so you also need to download configuration file of Cyclone DDS.</p>
+<ol>
+<li>
+<p>Download <code>cyclonedds.xml</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="go">wget -P ~/cyclonedds https://raw.githubusercontent.com/autowarefoundation/open-ad-kit-docs/main/docs/version-2.0/start-guide/installation/cyclonedds/cyclonedds.xml</span>
+</code></pre></div>
 </li>
 </ol>
 <h2 id="modify-cycloneddsxml">Modify <code>cyclonedds.xml</code><a class="headerlink" href="#modify-cycloneddsxml" title="Permanent link">#</a></h2>
@@ -1512,29 +1511,30 @@
 <ol>
 <li>
 <p>Find network interface.</p>
-<div class="highlight"><pre><span></span><code><span class="go">ip addr</span>
-<span class="go">1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000</span>
-<span class="go">    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00</span>
-<span class="go">    inet 127.0.0.1/8 scope host lo</span>
-<span class="go">       valid_lft forever preferred_lft forever</span>
-<span class="go">    inet6 ::1/128 scope host</span>
-<span class="go">       valid_lft forever preferred_lft forever</span>
-<span class="go"> 2: enP4p4s0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP group default qlen 1000</span>
-<span class="go">    link/ether 00:11:22:33:44:55 brd ff:ff:ff:ff:ff:ff</span>
-<span class="go">    inet 192.168.10.27/24 brd 192.168.10.255 scope global dynamic enP4p4s0</span>
-<span class="go">       valid_lft 332sec preferred_lft 332sec</span>
-<span class="go">    inet 192.168.10.13/24 brd 192.168.10.255 scope global secondary dynamic noprefixroute enP4p4s0</span>
-<span class="go">       valid_lft 337sec preferred_lft 262sec</span>
-<span class="go">    inet6 fe80::34c:b6f7:b356:b7/64 scope link</span>
-<span class="go">       valid_lft forever preferred_lft forever</span>
-<span class="go">    inet6 fe80::230:64ff:fe1a:a65/64 scope link</span>
-<span class="go">       valid_lft forever preferred_lft forever</span>
-<span class="go"> 3: docker0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc noqueue state DOWN group default</span>
-<span class="go">    link/ether aa:bb:cc:dd:ee:ff brd ff:ff:ff:ff:ff:ff</span>
-<span class="go">    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0</span>
-<span class="go">       valid_lft forever preferred_lft forever</span>
-</code></pre></div>
 <p>:speech_balloon: You can find a network interface such as <code>enP4p4s0</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="gp">root@comhpc:~# </span>ip a
+<span class="go">1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000</span>
+<span class="go">   link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00</span>
+<span class="go">   inet 127.0.0.1/8 scope host lo</span>
+<span class="go">      valid_lft forever preferred_lft forever</span>
+<span class="go">   inet6 ::1/128 scope host</span>
+<span class="go">      valid_lft forever preferred_lft forever</span>
+<span class="go">2: enP4p4s0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc mq state UP group default qlen 1000</span>
+<span class="go">   link/ether 00:30:64:1a:0a:65 brd ff:ff:ff:ff:ff:ff</span>
+<span class="go">   inet 192.168.0.62/24 brd 192.168.0.255 scope global dynamic enP4p4s0</span>
+<span class="go">      valid_lft 3383sec preferred_lft 2933sec</span>
+<span class="go">   inet6 fe80::1ab4:7a14:28e:4e61/64 scope link</span>
+<span class="go">      valid_lft forever preferred_lft forever</span>
+<span class="go">   inet6 fe80::230:64ff:fe1a:a65/64 scope link</span>
+<span class="go">      valid_lft forever preferred_lft forever</span>
+<span class="go">3: sit0@NONE: &lt;NOARP&gt; mtu 1480 qdisc noop state DOWN group default qlen 1000</span>
+<span class="go">   link/sit 0.0.0.0 brd 0.0.0.0</span>
+<span class="go">4: docker0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc noqueue state DOWN group default</span>
+<span class="go">   link/ether 02:42:4b:b2:ee:68 brd ff:ff:ff:ff:ff:ff</span>
+<span class="go">   inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0</span>
+<span class="go">      valid_lft forever preferred_lft forever</span>
+<span class="go">...</span>
+</code></pre></div>
 </li>
 <li>
 <p>Change the <code>NetworkInterfaceAddress</code>.</p>
