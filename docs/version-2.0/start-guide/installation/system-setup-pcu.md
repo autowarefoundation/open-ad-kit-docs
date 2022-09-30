@@ -40,11 +40,11 @@ The docker image of Autoware.Auto is registered in [GitLab Container Registry](h
 
    Files are placed in the directory :file_folder:[docs/Appendix/Open-AD-Kit-Start-Guide/map](../../../version-1.0/start-guide/installation/map)
 
-   - :page_facing_up:[lanelet2_map.osm](../../../version-1.0/start-guide/installationmap/kashiwanoha/lanelet2_map.osm)
-   - :page_facing_up:[pointcloud_map.pcd](../../../version-1.0/start-guide/installationmap/kashiwanoha/pointcloud_map.pcd)
-   - :page_facing_up:[global_map_center.pcd.yaml](../../../version-1.0/start-guide/installationmap/kashiwanoha/global_map_center.pcd.yaml)
-   - :page_facing_up:[lanelet2_map_provider.osm.yaml](../../../version-1.0/start-guide/installationmap/kashiwanoha/lanelet2_map_provider.osm.yaml)
-   - :page_facing_up:[map_publisher.param.yaml](../../../version-1.0/start-guide/installationmap/kashiwanoha/map_publisher.param.yaml)
+   - :page_facing_up:[lanelet2_map.osm](../../../version-1.0/start-guide/installation/map/kashiwanoha/lanelet2_map.osm)
+   - :page_facing_up:[pointcloud_map.pcd](../../../version-1.0/start-guide/installation/map/kashiwanoha/pointcloud_map.pcd)
+   - :page_facing_up:[global_map_center.pcd.yaml](../../../version-1.0/start-guide/installation/map/kashiwanoha/global_map_center.pcd.yaml)
+   - :page_facing_up:[lanelet2_map_provider.osm.yaml](../../../version-1.0/start-guide/installation/map/kashiwanoha/lanelet2_map_provider.osm.yaml)
+   - :page_facing_up:[map_publisher.param.yaml](../../../version-1.0/start-guide/installation/map/kashiwanoha/map_publisher.param.yaml)
 
    Copy files to your local folder (Downloads folder as example) as the following directory structure.
 
