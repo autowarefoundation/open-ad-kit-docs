@@ -1439,13 +1439,13 @@
 <ol>
 <li>
 <p>Copy files related to <strong>map contents</strong>.</p>
-<p>Files are placed in the directory :file_folder:<a href="map">docs/Appendix/Open-AD-Kit-Start-Guide/map</a></p>
+<p>Files are placed in the directory <img alt="📁" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c1.svg" title=":file_folder:" /><a href="map">docs/Appendix/Open-AD-Kit-Start-Guide/map</a></p>
 <ul>
-<li>:page_facing_up:<a href="map/kashiwanoha/lanelet2_map.osm">lanelet2_map.osm</a></li>
-<li>:page_facing_up:<a href="map/kashiwanoha/pointcloud_map.pcd">pointcloud_map.pcd</a></li>
-<li>:page_facing_up:<a href="map/kashiwanoha/global_map_center.pcd.yaml">global_map_center.pcd.yaml</a></li>
-<li>:page_facing_up:<a href="map/kashiwanoha/lanelet2_map_provider.osm.yaml">lanelet2_map_provider.osm.yaml</a></li>
-<li>:page_facing_up:<a href="map/kashiwanoha/map_publisher.param.yaml">map_publisher.param.yaml</a></li>
+<li><img alt="📄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c4.svg" title=":page_facing_up:" /><a href="map/kashiwanoha/lanelet2_map.osm">lanelet2_map.osm</a></li>
+<li><img alt="📄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c4.svg" title=":page_facing_up:" /><a href="map/kashiwanoha/pointcloud_map.pcd">pointcloud_map.pcd</a></li>
+<li><img alt="📄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c4.svg" title=":page_facing_up:" /><a href="map/kashiwanoha/global_map_center.pcd.yaml">global_map_center.pcd.yaml</a></li>
+<li><img alt="📄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c4.svg" title=":page_facing_up:" /><a href="map/kashiwanoha/lanelet2_map_provider.osm.yaml">lanelet2_map_provider.osm.yaml</a></li>
+<li><img alt="📄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c4.svg" title=":page_facing_up:" /><a href="map/kashiwanoha/map_publisher.param.yaml">map_publisher.param.yaml</a></li>
 </ul>
 <p>Copy files to your USB drive as the following directory structure.</p>
 <p><img alt="USB Map" src="../images/system-setup-ava/usb_map.png" /></p>
@@ -1453,9 +1453,9 @@
 <li>
 <p>Copy configuration file of <strong>Cyclone DDS</strong>.</p>
 <p>In this test, we are using Cyclone DDS, so you also need to copy configuration file of Cyclone DDS.</p>
-<p>File is placed in the directory :file_folder:<a href="cyclonedds">docs/Appendix/Open-AD-Kit-Start-Guide/cyclonedds</a></p>
+<p>File is placed in the directory <img alt="📁" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c1.svg" title=":file_folder:" /><a href="cyclonedds">docs/Appendix/Open-AD-Kit-Start-Guide/cyclonedds</a></p>
 <ul>
-<li>:page_facing_up:<a href="cyclonedds/cyclonedds.xml">cyclonedds.xml</a></li>
+<li><img alt="📄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c4.svg" title=":page_facing_up:" /><a href="cyclonedds/cyclonedds.xml">cyclonedds.xml</a></li>
 </ul>
 <p>Copy the file to your USB drive as the following directory structure.</p>
 <p><img alt="USB Cyclone DDS" src="../images/system-setup-ava/usb_cyclonedds.png" /></p>
@@ -1463,9 +1463,9 @@
 <li>
 <p>Copy <strong>kernel configuration</strong> file for tuning kernel parameters.</p>
 <p>We have to reconfigure kernel parameters by using <code>sysctl</code> for system stability.</p>
-<p>File is placed in the directory :file_folder:<a href="sysctl.d">docs/Appendix/Open-AD-Kit-Start-Guide/sysctl.d</a></p>
+<p>File is placed in the directory <img alt="📁" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c1.svg" title=":file_folder:" /><a href="sysctl.d">docs/Appendix/Open-AD-Kit-Start-Guide/sysctl.d</a></p>
 <ul>
-<li>:page_facing_up:<a href="sysctl.d/60_cyclonedds.conf">60_cyclonedds.conf</a></li>
+<li><img alt="📄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c4.svg" title=":page_facing_up:" /><a href="sysctl.d/60_cyclonedds.conf">60_cyclonedds.conf</a></li>
 </ul>
 <p>Copy the file to your USB root.</p>
 </li>
@@ -1534,13 +1534,13 @@
 <span class="go">    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0</span>
 <span class="go">       valid_lft forever preferred_lft forever</span>
 </code></pre></div>
-<p>:speech_balloon: You can find a network interface such as <code>enP4p4s0</code>.</p>
+<p><img alt="💬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4ac.svg" title=":speech_balloon:" /> You can find a network interface such as <code>enP4p4s0</code>.</p>
 </li>
 <li>
 <p>Change the <code>NetworkInterfaceAddress</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="go">vi ~/cyclonedds/cyclonedds.xml</span>
 </code></pre></div>
-<p>For example; :page_facing_up: cyclonedds.xml</p>
+<p>For example; <img alt="📄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c4.svg" title=":page_facing_up:" /> cyclonedds.xml</p>
 <div class="highlight"><pre><span></span><code><span class="w"> </span>&lt;General&gt;<span class="w"></span>
 <span class="gd">-  &lt;NetworkInterfaceAddress&gt;lo&lt;/NetworkInterfaceAddress&gt;</span><span class="w"></span>
 <span class="gi">+  &lt;NetworkInterfaceAddress&gt;enP4p4s0&lt;/NetworkInterfaceAddress&gt;</span><span class="w"></span>

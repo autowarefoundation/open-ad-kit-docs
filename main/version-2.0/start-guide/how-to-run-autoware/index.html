@@ -1433,7 +1433,7 @@
 <p>Deploy kubernetes clusters for Autoware.</p>
 <div class="highlight"><pre><span></span><code><span class="go">kubectl apply -f comhpc-deployments</span>
 </code></pre></div>
-<p>:speech_balloon: You can make sure deployments are deployed.</p>
+<p><img alt="💬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4ac.svg" title=":speech_balloon:" /> You can make sure deployments are deployed.</p>
 <div class="highlight"><pre><span></span><code><span class="gp">root@comhpc:~# </span>kubectl get deploy -o wide
 <span class="go">NAME               READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                                                                         SELECTOR</span>
 <span class="go">comhpc-control     1/1     1            1           15h   comhpc       ghcr.io/autowarefoundation/autoware-universe:galactic-20220728-prebuilt-cuda   io.kompose.service=comhpc</span>
@@ -1444,7 +1444,7 @@
 <span class="go">comhpc-system      1/1     1            1           17h   comhpc       ghcr.io/autowarefoundation/autoware-universe:galactic-20220728-prebuilt-cuda   io.kompose.service=comhpc</span>
 <span class="go">comhpc-vehicle     1/1     1            1           17h   comhpc       ghcr.io/autowarefoundation/autoware-universe:galactic-20220728-prebuilt-cuda   io.kompose.service=comhpc</span>
 </code></pre></div>
-<p>:speech_balloon: Please make sure all pods are running.</p>
+<p><img alt="💬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4ac.svg" title=":speech_balloon:" /> Please make sure all pods are running.</p>
 <div class="highlight"><pre><span></span><code><span class="gp">root@comhpc:~# </span>kubectl get pod -o wide
 <span class="go">NAME                                READY   STATUS    RESTARTS   AGE    IP              NODE   NOMINATED NODE   READINESS GATES</span>
 <span class="go">comhpc-control-58cb5b9dbd-fqckv     1/1     Running   0          104m   192.168.10.27   ava    &lt;none&gt;           &lt;none&gt;</span>
