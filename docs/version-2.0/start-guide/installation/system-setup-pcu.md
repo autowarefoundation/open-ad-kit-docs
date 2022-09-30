@@ -26,7 +26,7 @@ ssh user@192.168.10.221
 - [Post-installation steps for Linux](https://docs.docker.com/engine/install/linux-postinstall).
 
 The docker image of Autoware.Auto is registered in [GitLab Container Registry](https://gitlab.com/autowarefoundation/autoware.auto/AutowareAuto/container_registry/2511358).
-![GitLab Container Registry](images/system-setup-ava/gitlab-cr.png)
+![GitLab Container Registry](images/system-setup-pcu/gitlab-cr.png)
 
 1. Copy docker image to PCU.
 
@@ -38,13 +38,13 @@ The docker image of Autoware.Auto is registered in [GitLab Container Registry](h
 
 1. Copy files related to **map contents**.
 
-   Files are placed in the directory :file_folder:[docs/Appendix/Open-AD-Kit-Start-Guide/map](map)
+   Files are placed in the directory :file_folder:[docs/Appendix/Open-AD-Kit-Start-Guide/map](../../../version-1.0/start-guide/installation/map)
 
-   - :page_facing_up:[lanelet2_map.osm](map/kashiwanoha/lanelet2_map.osm)
-   - :page_facing_up:[pointcloud_map.pcd](map/kashiwanoha/pointcloud_map.pcd)
-   - :page_facing_up:[global_map_center.pcd.yaml](map/kashiwanoha/global_map_center.pcd.yaml)
-   - :page_facing_up:[lanelet2_map_provider.osm.yaml](map/kashiwanoha/lanelet2_map_provider.osm.yaml)
-   - :page_facing_up:[map_publisher.param.yaml](map/kashiwanoha/map_publisher.param.yaml)
+   - :page_facing_up:[lanelet2_map.osm](../../../version-1.0/start-guide/installation/map/kashiwanoha/lanelet2_map.osm)
+   - :page_facing_up:[pointcloud_map.pcd](../../../version-1.0/start-guide/installation/map/kashiwanoha/pointcloud_map.pcd)
+   - :page_facing_up:[global_map_center.pcd.yaml](../../../version-1.0/start-guide/installation/map/kashiwanoha/global_map_center.pcd.yaml)
+   - :page_facing_up:[lanelet2_map_provider.osm.yaml](../../../version-1.0/start-guide/installation/map/kashiwanoha/lanelet2_map_provider.osm.yaml)
+   - :page_facing_up:[map_publisher.param.yaml](../../../version-1.0/start-guide/installation/map/kashiwanoha/map_publisher.param.yaml)
 
    Copy files to your local folder (Downloads folder as example) as the following directory structure.
 

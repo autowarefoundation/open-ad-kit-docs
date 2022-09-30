@@ -2,7 +2,7 @@
 
 This page explains how to set up the development environment that are described in the System Configuration chapter.
 
-!!! warning "The following contents are diverted from [Open AD Kit version 1.0](https://github.com/autowarefoundation/autoware_reference_design/blob/main/docs/Appendix/Open-AD-Kit-Start-Guide/index.md). These contents will be updated for Open AD Kit version 2.0."
+!!! warning "The following contents are diverted from [Open AD Kit version 1.0](../../../version-1.0/start-guide/index.md). These contents will be updated for Open AD Kit version 2.0."
 
 ## Minimum requirements
 
