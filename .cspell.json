@@ -1,0 +1,33 @@
+{
+  "words": [
+    "acpid",
+    "baremetal",
+    "bmap",
+    "bmaptool",
+    "BBLAYERS",
+    "BBPATH",
+    "bblayers",
+    "drwx",
+    "drwxrwxr",
+    "fqckv",
+    "kirkstone",
+    "kompose",
+    "kvqm",
+    "libnvidia",
+    "libwfb",
+    "modesetting",
+    "nodm",
+    "openembedded",
+    "opengl",
+    "PACKAGECONFIG",
+    "packagegroup",
+    "rpmbuild",
+    "RPMS",
+    "TOPDIR",
+    "XFCE",
+    "xfce",
+    "xinerama",
+    "xorg",
+    "xxhg"
+  ]
+}
