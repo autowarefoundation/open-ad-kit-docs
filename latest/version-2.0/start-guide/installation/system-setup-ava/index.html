@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://autowarefoundation.github.io/open-ad-kit-docs/latest/version-2.0/start-guide/installation/system-setup-ava/">
       
       <link rel="icon" href="../../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -1428,7 +1428,7 @@
 <h2 id="access-to-ava-platform-via-ssh">Access to AVA platform via SSH<a class="headerlink" href="#access-to-ava-platform-via-ssh" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code><span class="go">ssh root@IP-ADDRESS</span>
 </code></pre></div>
-<p>:speech_balloon: For example;</p>
+<p><img alt="💬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4ac.svg" title=":speech_balloon:" /> For example;</p>
 <div class="highlight"><pre><span></span><code><span class="go">ssh root@192.168.0.62</span>
 </code></pre></div>
 <h2 id="download-kubernetes-yaml-files">Download kubernetes yaml files<a class="headerlink" href="#download-kubernetes-yaml-files" title="Permanent link">#</a></h2>
@@ -1443,7 +1443,7 @@
 <p>Unzip it.</p>
 <div class="highlight"><pre><span></span><code><span class="go">unzip comhpc-deployments.zip -d comhpc-deployments</span>
 </code></pre></div>
-<p>:speech_balloon: You will see the following files are unzipped.</p>
+<p><img alt="💬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4ac.svg" title=":speech_balloon:" /> You will see the following files are unzipped.</p>
 <div class="highlight"><pre><span></span><code><span class="go">Archive:  comhpc-deployments.zip</span>
 <span class="go">  inflating: comhpc-api-deployment.yaml</span>
 <span class="go">  inflating: comhpc-control-deployment.yaml</span>
@@ -1473,7 +1473,7 @@
 <p>Move <code>map</code> directory from <code>sample_data</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="go">mv sample_data/map/ ~/</span>
 </code></pre></div>
-<p>:speech_balloon: You will see the following files are located.</p>
+<p><img alt="💬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4ac.svg" title=":speech_balloon:" /> You will see the following files are located.</p>
 <div class="highlight"><pre><span></span><code><span class="gp">root@ava:~# </span>ls -la ~/map
 <span class="go">total 61288</span>
 <span class="go">drwxrwxr-x 2 root root     4096 Aug 18 06:23 .</span>
@@ -1511,7 +1511,7 @@
 <ol>
 <li>
 <p>Find network interface.</p>
-<p>:speech_balloon: You can find a network interface such as <code>enP4p4s0</code>.</p>
+<p><img alt="💬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4ac.svg" title=":speech_balloon:" /> You can find a network interface such as <code>enP4p4s0</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="gp">root@comhpc:~# </span>ip a
 <span class="go">1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000</span>
 <span class="go">   link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00</span>
@@ -1540,7 +1540,7 @@
 <p>Change the <code>NetworkInterfaceAddress</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="go">vi ~/cyclonedds/cyclonedds.xml</span>
 </code></pre></div>
-<p>For example; :page_facing_up: cyclonedds.xml</p>
+<p>For example; <img alt="📄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4c4.svg" title=":page_facing_up:" /> cyclonedds.xml</p>
 <div class="highlight"><pre><span></span><code><span class="w"> </span>&lt;General&gt;<span class="w"></span>
 <span class="gd">-  &lt;NetworkInterfaceAddress&gt;lo&lt;/NetworkInterfaceAddress&gt;</span><span class="w"></span>
 <span class="gi">+  &lt;NetworkInterfaceAddress&gt;enP4p4s0&lt;/NetworkInterfaceAddress&gt;</span><span class="w"></span>
@@ -1631,10 +1631,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://autowarefoundation.github.io/open-ad-kit-docs/latest/version-2.0/start-guide/how-to-run-autoware/">
       
       <link rel="icon" href="../../../assets/images/autoware-foundation.png">
-      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+      <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
@@ -1433,7 +1433,7 @@
 <p>Deploy kubernetes clusters for Autoware.</p>
 <div class="highlight"><pre><span></span><code><span class="go">kubectl apply -f comhpc-deployments</span>
 </code></pre></div>
-<p>:speech_balloon: You can make sure deployments are deployed.</p>
+<p><img alt="💬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4ac.svg" title=":speech_balloon:" /> You can make sure deployments are deployed.</p>
 <div class="highlight"><pre><span></span><code><span class="gp">root@comhpc:~# </span>kubectl get deploy -o wide
 <span class="go">NAME               READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES                                                                         SELECTOR</span>
 <span class="go">comhpc-control     1/1     1            1           15h   comhpc       ghcr.io/autowarefoundation/autoware-universe:galactic-20220728-prebuilt-cuda   io.kompose.service=comhpc</span>
@@ -1444,7 +1444,7 @@
 <span class="go">comhpc-system      1/1     1            1           17h   comhpc       ghcr.io/autowarefoundation/autoware-universe:galactic-20220728-prebuilt-cuda   io.kompose.service=comhpc</span>
 <span class="go">comhpc-vehicle     1/1     1            1           17h   comhpc       ghcr.io/autowarefoundation/autoware-universe:galactic-20220728-prebuilt-cuda   io.kompose.service=comhpc</span>
 </code></pre></div>
-<p>:speech_balloon: Please make sure all pods are running.</p>
+<p><img alt="💬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4ac.svg" title=":speech_balloon:" /> Please make sure all pods are running.</p>
 <div class="highlight"><pre><span></span><code><span class="gp">root@comhpc:~# </span>kubectl get pod -o wide
 <span class="go">NAME                                READY   STATUS    RESTARTS   AGE    IP              NODE   NOMINATED NODE   READINESS GATES</span>
 <span class="go">comhpc-control-58cb5b9dbd-fqckv     1/1     Running   0          104m   192.168.10.27   ava    &lt;none&gt;           &lt;none&gt;</span>
@@ -1555,10 +1555,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
