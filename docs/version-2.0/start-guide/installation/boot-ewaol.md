@@ -31,6 +31,7 @@ Remove M.2 SSD from AVA platform and flash yocto image to it directly.
    :speech_balloon: For example
 
    ```console
+   sudo apt install bmap-tools
    sudo bmaptool copy --bmap build/tmp_baremetal/deploy/images/ava/ewaol-baremetal-image-ava.wic.bmap build/tmp_baremetal/deploy/images/ava/ewaol-baremetal-image-ava.wic.gz  /dev/sdb
    ```
 
