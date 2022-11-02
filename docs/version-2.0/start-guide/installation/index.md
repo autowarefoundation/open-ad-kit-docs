@@ -7,7 +7,7 @@ This page explains how to set up the development environment that are described 
 ## Minimum requirements
 
 - Developer Platform:
-  - [AVA Platform](https://www.ipi.wiki/pages/com-hpc-altra) or PCU Platform
+  - [AVA Platform](https://www.ipi.wiki/pages/com-hpc-altra) or PCU Platform or Xavier Platform
 - In-Vehicle Development Platform [^1]: TODO
 - Software Tool:
   - Scenario simulator version 0.6.5+ [^2]
@@ -37,6 +37,10 @@ The setup procedure depends on the developer platform.
 
 1. [Getting started with PCU](./getting-started-pcu.md)
 
+### Xavier Platform
+
+1. [Getting started with Xavier](./getting-started-xavier.md)
+
 ## 2. Set up the in-vehicle platform
 
 !!! note "If you do NOT need a vehicle-edge platform, please skip this step."
@@ -53,6 +57,10 @@ TODO
 
 1. [System setup on PCU](./system-setup-pcu.md)
 
+### Xavier Platform
+
+1. [System setup on Xavier Platform](./system-setup-xavier.md)
+
 ## 4. Install Autoware container images on the in-vehicle platform
 
 !!! note "If you do NOT need a vehicle-edge platform, please skip this step."
@@ -68,6 +76,10 @@ TODO
 1. [System setup on your host](./system-setup-host.md)
 
 ### PCU Platform
+
+1. [System setup on your host](./system-setup-host.md)
+
+### Xavier Platform
 
 1. [System setup on your host](./system-setup-host.md)
 
