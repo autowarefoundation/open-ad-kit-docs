@@ -34,26 +34,29 @@ The docker image of Autoware.Auto is registered in [GitLab Container Registry](h
 
 **NOTE**: K3s should be installed with following steps. For official instructions please refer to: [Install K3s on Ubuntu](https://docs.k3s.io/quick-start).
 
-1. install K3s
+1. Install K3s.
 
-```console
-curl -sfL https://get.k3s.io | sh -
-```
-2. create directory
+   ```console
+   curl -sfL https://get.k3s.io | sh -
+   ```
 
-```console
-mkdir ~/.kube/
-```
-3. copy config file
+1. Create directory.
 
-```console
-sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
-```
-4. setting environment
+   ```console
+   mkdir ~/.kube/
+   ```
 
-```console
-export KUBECONFIG=~/.kube/config
-```
+1. Copy config file
+
+   ```console
+   sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
+   ```
+
+1. Setting environment
+
+   ```console
+   export KUBECONFIG=~/.kube/config
+   ```
 
 ## Download kubernetes yaml files
 
