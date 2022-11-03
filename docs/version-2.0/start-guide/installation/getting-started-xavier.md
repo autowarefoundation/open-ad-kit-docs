@@ -63,4 +63,3 @@ usb0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
 ```
 
 :speech_balloon: You can find IP address of Xavier such as `192.168.10.46`.
-

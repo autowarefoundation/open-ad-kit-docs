@@ -29,6 +29,7 @@ The docker image of Autoware.Auto is registered in [GitLab Container Registry](h
 
    ```console
    docker pull registry.gitlab.com/autowarefoundation/autoware.auto/autowareauto/arm64/openadkit-foxy:latest
+   ```
 
 ## K3s Installation
 
@@ -158,7 +159,7 @@ You need to change the element `NetworkInterfaceAddress` to the network interfac
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
        valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host 
+    inet6 ::1/128 scope host
        valid_lft forever preferred_lft forever
    2: dummy0: <BROADCAST,NOARP> mtu 1500 qdisc noop state DOWN group default qlen 1000
     link/ether 0e:fa:61:5e:35:cd brd ff:ff:ff:ff:ff:ff
@@ -174,14 +175,16 @@ You need to change the element `NetworkInterfaceAddress` to the network interfac
     link/ether 2c:16:db:a3:03:10 brd ff:ff:ff:ff:ff:ff
     inet 192.168.10.46/22 brd 192.168.11.255 scope global dynamic noprefixroute eth1
        valid_lft 84077sec preferred_lft 84077sec
-    inet6 fe80::9fcb:8fc6:a1a4:c6d2/64 scope link noprefixroute 
+    inet6 fe80::9fcb:8fc6:a1a4:c6d2/64 scope link noprefixroute
        valid_lft forever preferred_lft forever
-   8: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+   8: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
     link/ether 02:42:0b:47:8f:45 brd ff:ff:ff:ff:ff:ff
     inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
        valid_lft forever preferred_lft forever
    ```
+
    :speech_balloon: You can find a network interface such as `eth1`.
+
 2. Change the `NetworkInterfaceAddress`.
 
    ```console
