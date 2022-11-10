@@ -57,7 +57,7 @@ In this test, we try to run rviz inside docker, so please install nvidia-docker2
 
    ![t4v2.yaml](images/system-setup-host/t4v2.yaml.png)
 
-1. Change the path to `lanelet2_map.osm` and `pointcloud_map.pcd`.
+1. Change the `filepath` of `lanelet2_map.osm` and `pointcloud_map.pcd` to your own directory.
 
    ![Edit t4v2.yaml](images/system-setup-host/edit.t4v2.yaml.png)
 
