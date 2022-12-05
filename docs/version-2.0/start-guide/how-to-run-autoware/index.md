@@ -13,9 +13,9 @@ This page explains how to run Autoware on the development platform that are set 
 
 ## 1. Run Autoware on the developer platform
 
-### Run Autoware.Auto on AVA platform or PCU
+### Run Autoware.Auto on AVA platform or PCU or Xavier
 
-1. Access AVA platform or PCU via SSH.
+1. Access AVA platform or PCU or Xavier via SSH.
 
 1. Deploy kubernetes clusters for Autoware.
 
