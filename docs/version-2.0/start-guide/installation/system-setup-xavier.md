@@ -16,19 +16,19 @@ ssh root@IP-ADDRESS
 ssh nv@192.168.10.46
 ```
 
-## Copy Autoware.Auto image to Xavier
+## Copy Autoware.Universe image to Xavier
 
 **NOTE**: docker should be installed with post-installation steps. For instructions please refer to:
 
 - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu).
 - [Post-installation steps for Linux](https://docs.docker.com/engine/install/linux-postinstall).
 
-The docker image of Autoware.Auto is registered in [GitLab Container Registry](https://gitlab.com/autowarefoundation/autoware.auto/AutowareAuto/container_registry/2511358).
+The docker image of Autoware.Universe for arm64 is registered in [Autoware Foundation Container Registry](https://github.com/autowarefoundation/autoware/pkgs/container/autoware-universe/30821188?tag=galactic-20220728-prebuilt-cuda).
 
 1. Copy docker image to Xavier.
 
    ```console
-   docker pull registry.gitlab.com/autowarefoundation/autoware.auto/autowareauto/arm64/openadkit-foxy:latest
+   docker pull ghcr.io/autowarefoundation/autoware-universe:galactic-20220728-prebuilt-cuda
    ```
 
 ## K3s Installation
