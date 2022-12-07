@@ -1370,8 +1370,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#copy-autowareauto-image-to-xavier" class="md-nav__link">
-    Copy Autoware.Auto image to Xavier
+  <a href="#copy-autoware-universe-image-to-xavier" class="md-nav__link">
+    Copy Autoware Universe image to Xavier
   </a>
   
 </li>
@@ -1447,17 +1447,17 @@
 <p><img alt="💬" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4ac.svg" title=":speech_balloon:" /> For example;</p>
 <div class="highlight"><pre><span></span><code><span class="go">ssh nv@192.168.10.46</span>
 </code></pre></div>
-<h2 id="copy-autowareauto-image-to-xavier">Copy Autoware.Auto image to Xavier<a class="headerlink" href="#copy-autowareauto-image-to-xavier" title="Permanent link">#</a></h2>
+<h2 id="copy-autoware-universe-image-to-xavier">Copy Autoware Universe image to Xavier<a class="headerlink" href="#copy-autoware-universe-image-to-xavier" title="Permanent link">#</a></h2>
 <p><strong>NOTE</strong>: docker should be installed with post-installation steps. For instructions please refer to:</p>
 <ul>
 <li><a href="https://docs.docker.com/engine/install/ubuntu">Install Docker Engine on Ubuntu</a>.</li>
 <li><a href="https://docs.docker.com/engine/install/linux-postinstall">Post-installation steps for Linux</a>.</li>
 </ul>
-<p>The docker image of Autoware.Auto is registered in <a href="https://gitlab.com/autowarefoundation/autoware.auto/AutowareAuto/container_registry/2511358">GitLab Container Registry</a>.</p>
+<p>The docker image of Autoware Universe for arm64 is registered in <a href="https://github.com/autowarefoundation/autoware/pkgs/container/autoware-universe/30821188?tag=galactic-20220728-prebuilt-cuda">Autoware Foundation Container Registry</a>.</p>
 <ol>
 <li>
 <p>Copy docker image to Xavier.</p>
-<div class="highlight"><pre><span></span><code><span class="go">docker pull registry.gitlab.com/autowarefoundation/autoware.auto/autowareauto/arm64/openadkit-foxy:latest</span>
+<div class="highlight"><pre><span></span><code><span class="go">docker pull ghcr.io/autowarefoundation/autoware-universe:galactic-20220728-prebuilt-cuda</span>
 </code></pre></div>
 </li>
 </ol>
