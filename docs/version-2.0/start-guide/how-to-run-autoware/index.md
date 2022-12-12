@@ -64,4 +64,3 @@ Please refer to the [How to run simulators](../how-to-run-simulators/index.md) s
 ## 4. Run centerpoint object detection simultaneously on the development platform
 
 Please refer to the [tutorial](https://github.com/autowarefoundation/autoware.universe/blob/main/perception/lidar_centerpoint/launch/centerpoint_vs_centerpoint-tiny/README.md)
-
