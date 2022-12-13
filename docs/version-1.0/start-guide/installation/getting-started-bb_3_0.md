@@ -6,6 +6,10 @@ _Reference: BlueBox3.0_LinuxBSP_Quick_Start_Guide_
 
 **The BlueBox 3.0 requires authorization for purchase based on the intended use. Support for BlueBox 3.0 projects will be provided exclusively through the dedicated NXP Community, which also requires authorization to view. Please contact support for further assistance.**
 
+The NXP BlueBox development platform delivers the performance and functional safety features required to build zonal architectures, high-performance computing systems, analyze driving environments, assess risk factors and then direct the self-driving car's behavior.
+
+[Autoware on BlueBox platform demo](https://www.youtube.com/watch?v=eI5JizQT8h0&t=321s)
+
 This instruction explains how to boot up Ubuntu on BlueBox 3.0 and access it from host PC.
 
 ## Hardware Setup
