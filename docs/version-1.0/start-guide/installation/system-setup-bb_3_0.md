@@ -7,21 +7,22 @@ This instruction explans how to perform system setup for test execution on BlueB
 The Docker Engine is installed in fsl-image-ubuntu image by default, only need to copy docker images and neccesary files to BlueBox 3.0.
 
 ## Access to BlueBox 3.0 via SSH
-   ```console
-   ssh bluebox@IP-ADDRESS
-   ```
 
-   For example;
+```console
+ssh bluebox@IP-ADDRESS
+```
 
-   ```console
-   ssh bluebox@192.168.1.21
-   ```
+For example;
+
+```console
+ssh bluebox@192.168.1.21
+```
 
 ## Copy Autoware.Auto image to BlueBox 3.0
 
-__NOTE__: docker should be initialized with post-installation steps. For instructions please refer to:  
+**NOTE**: docker should be initialized with post-installation steps. For instructions please refer to:
 
-- [Post-installation steps for Linux](https://docs.docker.com/engine/install/linux-postinstall).  
+- [Post-installation steps for Linux](https://docs.docker.com/engine/install/linux-postinstall).
 
 The docker image of Autoware.Auto is registered in [GitLab Container Registry](https://gitlab.com/autowarefoundation/autoware.auto/AutowareAuto/container_registry/2511358).
 ![GitLab Container Registry](images/system-setup-ava/gitlab-cr.png)
@@ -34,7 +35,7 @@ The docker image of Autoware.Auto is registered in [GitLab Container Registry](h
 
 ## Copy neccesary files to lcoal Downloads folder
 
-1. Copy files related to __map contents__.
+1. Copy files related to **map contents**.
 
    Files are placed in the directory :file_folder:[docs/Appendix/Open-AD-Kit-Start-Guide/map](map)
 
@@ -48,7 +49,7 @@ The docker image of Autoware.Auto is registered in [GitLab Container Registry](h
 
    ![Local Map](images/system-setup-pcu/local_map.png)
 
-1. Copy configuration file of __Cyclone DDS__.
+1. Copy configuration file of **Cyclone DDS**.
 
    In this test, we are using Cyclone DDS, so you also need to copy configuration file of Cyclone DDS.
 
@@ -60,7 +61,7 @@ The docker image of Autoware.Auto is registered in [GitLab Container Registry](h
 
    ![Local Cyclone DDS](images/system-setup-pcu/local_cyclonedds.png)
 
-1. Copy __kernel configuration__ file for tuning kernel parameters.
+1. Copy **kernel configuration** file for tuning kernel parameters.
 
    We have to reconfigure kernel parameters by using `sysctl` for system stability.
 
@@ -89,9 +90,11 @@ The docker image of Autoware.Auto is registered in [GitLab Container Registry](h
       ```
 
       For example;
+
       ```console
       sudo scp username@192.168.1.23:/home/username/Downloads/60_cyclonedds.conf /etc/sysctl.d/
       ```
+
       Then type in the password of BlueBox 3.0 (default password: bluebox) and host PC as request.
 
    1. Update kernel parameters.
@@ -100,7 +103,7 @@ The docker image of Autoware.Auto is registered in [GitLab Container Registry](h
       sudo sysctl -p /etc/sysctl.d/60_cyclonedds.conf
       ```
 
-   1. Copy __map contents__ files and __Cyclone DDS__ configuration file.
+   1. Copy **map contents** files and **Cyclone DDS** configuration file.
 
       ```console
       sudo scp -r USER-NAME@IP-ADDRESS:/home/username/Downloads/map ~/
@@ -136,5 +139,5 @@ You need to change the element `NetworkInterfaceAddress` to the network interfac
    -  <NetworkInterfaceAddress>lo</NetworkInterfaceAddress>
    +  <NetworkInterfaceAddress>eth1</NetworkInterfaceAddress>
     </General>
-   
+
    ```

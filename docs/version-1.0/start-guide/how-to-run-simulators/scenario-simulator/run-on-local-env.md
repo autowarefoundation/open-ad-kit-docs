@@ -63,5 +63,4 @@ Now you can see...
 ![DEMO](../../installation/images/run-autoware/demo.png)
 
 [Demo on BlueBox 3.0](../../installation/images/run-autoware/Run_on_BlueBox3.0.mp4)
-__NOTE__: According to the [limitations and issues](../limitations-and-issues/limitations-and-issues.md), the ego vehicle drives slowly. The demo video is x3 fast play.
-
+**NOTE**: According to the [limitations and issues](../limitations-and-issues/limitations-and-issues.md), the ego vehicle drives slowly. The demo video is x3 fast play.
