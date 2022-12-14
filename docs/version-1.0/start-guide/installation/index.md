@@ -5,7 +5,7 @@ This page explains how to set up the development environment that are described 
 ## Minimum requirements
 
 - Developer Platform:
-  - [AVA Platform](https://www.ipi.wiki/pages/com-hpc-altra) or PCU Platform
+  - [AVA Platform](https://www.ipi.wiki/pages/com-hpc-altra), PCU Platform or [BlueBox 3.0](https://www.nxp.com/design/designs/bluebox-3-0-automotive-high-performance-compute-ahpc-development-platform:BlueBox)
 - In-Vehicle Development Platform [^1]: TODO
 - Software Tool:
   - Scenario simulator version x.x [^2]
@@ -35,6 +35,10 @@ The setup procedure depends on the developer platform.
 
 1. [Getting started with PCU](./getting-started-pcu.md)
 
+### BlueBox 3.0 Platform
+
+1. [Getting started with BlueBox 3.0](./getting-started-bb_3_0.md)
+
 ## 2. Set up the in-vehicle platform
 
 !!! note "If you do NOT need a vehicle-edge platform, please skip this step."
@@ -51,6 +55,10 @@ TODO
 
 1. [System setup on PCU](./system-setup-pcu.md)
 
+### BlueBox 3.0 Platform
+
+1. [System setup on BlueBox 3.0](./system-setup-bb_3_0.md)
+
 ## 4. Install Autoware container images on the in-vehicle platform
 
 !!! note "If you do NOT need a vehicle-edge platform, please skip this step."
@@ -66,6 +74,10 @@ TODO
 1. [System setup on your host](./system-setup-host.md)
 
 ### PCU Platform
+
+1. [System setup on your host](./system-setup-host.md)
+
+### BlueBox 3.0 Platform
 
 1. [System setup on your host](./system-setup-host.md)
 
