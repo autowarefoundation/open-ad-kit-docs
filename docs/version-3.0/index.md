@@ -8,14 +8,14 @@
 
  Open AD Kit aims to democratize autonomous drive (AD) systems by bringing the cloud and edge closer together. In doing so, Open AD Kit will lower the threshold for developing and deploying the Autoware software stack by providing an efficient and modernized CI-CD approach.
 
-![Open AD Kit CI-CD](version-3.0/assets/images/cicd.png)
+![Open AD Kit CI-CD](assets/images/cicd.png)
 
 For more details about the Open AD Kit project, its goals and details of the Autoware Foundation working group that oversees the project, refer to the [Open AD Kit Working Group wiki](https://github.com/autowarefoundation/autoware-projects/wiki/Open-AD-Kit-working-group).
 
 ## Getting started
 
-- [Start guide](version-3.0/start-guide) describes how to install, set up and run **Open AD Kit v3.0** and its associated simulators on supported development platforms.
-- [Application example](version-3.0/application-example) provides an actual application example for **Open AD Kit v3.0** that can be used as a reference for the development of other applications.
+- [Start guide](start-guide) describes how to install, set up and run **Open AD Kit v3.0** and its associated simulators on supported development platforms.
+- [Application example](application-example) provides an actual application example for **Open AD Kit v3.0** that can be used as a reference for the development of other applications.
 
 ## Releases
 [version 3.0](../version-3.0/index.md) **Will be officially released at Q1/2024**
