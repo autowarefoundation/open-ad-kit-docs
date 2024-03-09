@@ -1,0 +1,15 @@
+mkdocs
+mkdocs-material
+# mkdocs-minify-plugin
+# mkdocs-redirects
+# mkdocs-git-revision-date-localized-plugin
+# mkdocs-video
+mkdocs-exclude
+mkdocs-same-dir
+mkdocs-macros-plugin
+mkdocs-awesome-pages-plugin
+markdown<3.4
+fontawesome-markdown
+python-markdown-math
+mdx_truly_sane_lists
+plantuml-markdown
