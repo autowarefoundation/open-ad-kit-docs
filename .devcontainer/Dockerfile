@@ -17,9 +17,9 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 RUN groupadd work -g $GID \
-  && useradd -ms /bin/bash $USER -g $GID -u $UID \
-  && printf "$USER:$USER" | chpasswd \
-  && printf "$USER ALL= NOPASSWD: ALL\\n" >> /etc/sudoers
+    && useradd -ms /bin/bash $USER -g $GID -u $UID \
+    && printf "$USER:$USER" | chpasswd \
+    && printf "$USER ALL= NOPASSWD: ALL\\n" >> /etc/sudoers
 
 USER $USER
 WORKDIR $HOME
