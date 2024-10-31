@@ -591,6 +591,31 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/openadkit_v3/version-3.0/start-guide/how-to-run-autoware/deployment-scenarios/</loc>
+         <lastmod>2024-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/openadkit_v3/version-3.0/start-guide/how-to-run-autoware/integration-guide/</loc>
+         <lastmod>2024-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/openadkit_v3/version-3.0/start-guide/how-to-run-autoware/performance-optimization/</loc>
+         <lastmod>2024-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/openadkit_v3/version-3.0/start-guide/how-to-run-autoware/security-considerations/</loc>
+         <lastmod>2024-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://autowarefoundation.github.io/open-ad-kit-docs/openadkit_v3/version-3.0/start-guide/how-to-run-autoware/troubleshooting-guide/</loc>
+         <lastmod>2024-10-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://autowarefoundation.github.io/open-ad-kit-docs/openadkit_v3/version-3.0/start-guide/how-to-run-simulators/</loc>
          <lastmod>2024-10-31</lastmod>
          <changefreq>daily</changefreq>
