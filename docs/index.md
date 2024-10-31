@@ -8,8 +8,6 @@
 
  Open AD Kit aims to democratize autonomous drive (AD) systems by bringing the cloud and edge closer together. In doing so, Open AD Kit will lower the threshold for developing and deploying the Autoware software stack by providing an efficient and modernized CI-CD approach.
 
-![Open AD Kit CI-CD](version-3.0/assets/images/cicd.png)
-
 For more details about the Open AD Kit project, its goals and details of the Autoware Foundation working group that oversees the project, refer to the [Open AD Kit Working Group wiki](https://github.com/autowarefoundation/autoware-projects/wiki/Open-AD-Kit-working-group).
 
 ## Getting started
