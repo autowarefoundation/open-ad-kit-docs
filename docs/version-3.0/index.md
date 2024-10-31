@@ -1,6 +1,5 @@
 # Open AD Kit Documentation
 
-!!! The latest version is 3.0, but it has not been officially released yet, but planned to be released at **Q1/2024**
 
 ## Open AD Kit: Containerized Workloads for the Autoware
 
@@ -18,7 +17,7 @@ For more details about the Open AD Kit project, its goals and details of the Aut
 - [Application example](application-example) provides an actual application example for **Open AD Kit v3.0** that can be used as a reference for the development of other applications.
 
 ## Releases
-[version 3.0](../version-3.0/index.md) **Will be officially released at Q1/2024**
+[version 3.0](../version-3.0/index.md) **Will be officially released at Q1/**
 
 [version 2.0](../version-2.0/index.md) **Obsolete**
 

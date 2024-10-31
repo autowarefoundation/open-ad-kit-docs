@@ -27,7 +27,6 @@ The setup procedure depends on the developer platform. Currently only verified p
 
 ## 2. Pull Open AD Kit images on the developer platform
 
-**TODO- Official images will be published  in Q1/2024**
 
 ```console
 docker pull ghcr ghcr.io/autowarefoundation/openadk:..
