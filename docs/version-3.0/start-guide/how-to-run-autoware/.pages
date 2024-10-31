@@ -1,2 +1,7 @@
 nav:
   - index.md
+  - deployment-scenarios
+  - integration-guide
+  - performance-optimization
+  - security-considerations
+  - troubleshooting-guide
