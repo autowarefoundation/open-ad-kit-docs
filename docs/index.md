@@ -13,7 +13,7 @@ For more details about the Open AD Kit project, its goals and details of the Aut
 ## Getting started
 
 - [Start guide](version-3.0/start-guide) describes how to install, set up and run **Open AD Kit v3.0** and its associated simulators on supported development platforms.
-- [Application example](version-3.0/application-example) provides an actual application example for **Open AD Kit v3.0** that can be used as a reference for the development of other applications.
+- [Application examples](version-3.0/application-examples) provides actual application examples for **Open AD Kit** that can be used as a reference for the development of other applications.
 
 ## Remarks
 
