@@ -1,4 +1,5 @@
 nav:
-  - Latest: ./version-2.0
-  - version-2.0
-  - version-1.0
+  - Introduction: index.md
+  - quick-start
+  - system-configuration
+  - application-example
