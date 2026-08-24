@@ -17,6 +17,7 @@ This page explains how to set up the development environment that are described 
   - [Scenario simulator for x86_64](https://github.com/tier4/scenario_simulator_v2/pkgs/container/scenario_simulator_v2) [^2]
 
 [^1]: This is unnecessary if you do NOT need a vehicle-edge platform.
+
 [^2]: This is unnecessary if you can use the cloud development platform, Web.Auto.
 
 The following diagram shows a minimum configuration of Open AD Kit. "Your host machine" will be replaced by the cloud development platform if you can use Web.Auto.
