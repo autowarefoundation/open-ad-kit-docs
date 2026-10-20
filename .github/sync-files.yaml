@@ -31,7 +31,6 @@
 
 - repository: autowarefoundation/autoware-documentation
   files:
-    - source: .github/workflows/deploy-docs.yaml
     - source: .github/workflows/delete-closed-pr-docs.yaml
     - source: .pre-commit-config.yaml
     - source: mkdocs.yaml
