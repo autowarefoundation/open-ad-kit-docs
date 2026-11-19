@@ -32,51 +32,51 @@ This instruction explains how to install advanced software for AVA platform.
 
    ```diff
     header:
-    version: 1
-    includes:
-       - repo: meta-ewaol
-   -     file: meta-ewaol-config/kas/baremetal.yml
-   +     file: meta-ewaol-config/kas/baremetal-sdk.yml
+      version: 1
+      includes:
+        - repo: meta-ewaol
+   -      file: meta-ewaol-config/kas/baremetal.yml
+   +      file: meta-ewaol-config/kas/baremetal-sdk.yml
 
     repos:
-    meta-ewaol:
-       path: meta-ewaol
+      meta-ewaol:
+        path: meta-ewaol
 
-    meta-adlink-ampere:
+      meta-adlink-ampere:
 
-   +meta-openembedded:
-   +   path: layers/meta-openembedded
-   +   layers:
+   +  meta-openembedded:
+   +    path: layers/meta-openembedded
+   +    layers:
    +      meta-oe:
    +      meta-gnome:
    +      meta-multimedia:
    +      meta-xfce:
    +
-   +meta-ewaol-ext:
-   +   path: meta-ewaol-ext
+   +  meta-ewaol-ext:
+   +    path: meta-ewaol-ext
 
 
     machine: ava
 
     bblayers_conf_header:
-    base: |
-       POKY_BBLAYERS_CONF_VERSION = "2"
-       BBPATH = "${TOPDIR}"
-       BBFILES ?= ""
+      base: |
+        POKY_BBLAYERS_CONF_VERSION = "2"
+        BBPATH = "${TOPDIR}"
+        BBFILES ?= ""
 
    +local_conf_header:
-   +meta-at: |
-   +   XSERVER:append = " xserver-xorg-extension-glx xserver-xorg-module-libwfb xserver-xorg-module-exa"
-   +   IMAGE_INSTALL:append = " packagegroup-core-x11 packagegroup-xfce-extended acpid xf86-video-modesetting mesa-demos nvidia-container-toolkit"
-   +   DISTRO_FEATURES:append = " opengl x11 glx"
-   +   PACKAGECONFIG:append:pn-xserver-xorg = " xinerama"
-   +   IMAGE_FEATURES:append =" x11 x11-base"
-   +   INSANE_SKIP:${PN}:append = " already-stripped"
-   +   FILES:${PN}:append =" /usr/share/containers/oci/hooks.d/oci-nvidia-hook.json"
+   +  meta-at: |
+   +    XSERVER:append = " xserver-xorg-extension-glx xserver-xorg-module-libwfb xserver-xorg-module-exa"
+   +    IMAGE_INSTALL:append = " packagegroup-core-x11 packagegroup-xfce-extended acpid xf86-video-modesetting mesa-demos nvidia-container-toolkit"
+   +    DISTRO_FEATURES:append = " opengl x11 glx"
+   +    PACKAGECONFIG:append:pn-xserver-xorg = " xinerama"
+   +    IMAGE_FEATURES:append =" x11 x11-base"
+   +    INSANE_SKIP:${PN}:append = " already-stripped"
+   +    FILES:${PN}:append =" /usr/share/containers/oci/hooks.d/oci-nvidia-hook.json"
 
     target:
-   -- ewaol-baremetal-image
-   +- ewaol-baremetal-sdk-image
+   -  - ewaol-baremetal-image
+   +  - ewaol-baremetal-sdk-image
    ```
 
 1. Build via kas.
