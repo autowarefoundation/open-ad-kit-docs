@@ -13,13 +13,13 @@ This page explains how to run Autoware on the development platform that are set 
 
 ## 1. Run Autoware on the developer platform
 
-### Run Autoware.Auto on AVA platform or PCU
+### Run Autoware.Auto on AVA platform, PCU or BlueBox 3.0
 
 1. Open terminal window for each module on you host.
 
-1. Access AVA platform or PCU via SSH in each terminal window.
+2. Access AVA platform, PCU or BlueBox 3.0 via SSH in each terminal window.
 
-1. Find docker image id.
+3. Find docker image id.
 
 ```console
 docker image ls
